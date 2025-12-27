@@ -390,6 +390,14 @@ h4 { font-size: var(--text-xl); }
   overflow: hidden;
 }
 
+.hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
 .image-placeholder {
   display: flex;
   flex-direction: column;
@@ -488,6 +496,24 @@ h4 { font-size: var(--text-xl); }
   padding: var(--space-xl);
   position: relative;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  overflow: hidden;
+}
+
+.program-image {
+  margin: calc(-1 * var(--space-xl));
+  margin-bottom: var(--space-lg);
+  overflow: hidden;
+}
+
+.program-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.program-card:hover .program-image img {
+  transform: scale(1.05);
 }
 
 .program-card:hover {
@@ -696,6 +722,14 @@ h4 { font-size: var(--text-xl); }
 .credential-icon {
   color: var(--color-secondary);
   font-weight: 600;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
 }
 
 @media (max-width: 968px) {
