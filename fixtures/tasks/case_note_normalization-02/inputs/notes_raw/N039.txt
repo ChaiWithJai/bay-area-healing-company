@@ -1,0 +1,5 @@
+2026-06-11 | service = employment coaching | outcome = 
+Outcome: appointment scheduled
+Outcome: cancelled
+Name: Synthetic Person 39
+Email: person39@example.invalid

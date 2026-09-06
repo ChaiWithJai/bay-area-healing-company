@@ -1,0 +1,3 @@
+Encounter 2026-07-01. Service provided: food support. Outcome recorded: application submitted
+Name: Synthetic Person 29
+Email: person29@example.invalid

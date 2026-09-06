@@ -1,0 +1,16 @@
+{
+  "fields": [
+    "note_id",
+    "date",
+    "service",
+    "outcome",
+    "source_id",
+    "quote"
+  ],
+  "required": [
+    "date",
+    "service",
+    "outcome"
+  ],
+  "expected_notes": 40
+}

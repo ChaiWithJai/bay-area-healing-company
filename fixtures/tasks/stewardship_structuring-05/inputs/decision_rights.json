@@ -1,0 +1,17 @@
+[
+  {
+    "decision": "Restricted fund spending oversight",
+    "authority": "Independent host board",
+    "independent": true
+  },
+  {
+    "decision": "Technical roadmap",
+    "authority": "Maintainer council",
+    "independent": false
+  },
+  {
+    "decision": "Succession appointment",
+    "authority": "Independent host board",
+    "independent": true
+  }
+]

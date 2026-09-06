@@ -1,0 +1,16 @@
+{
+  "prohibited_fields": [
+    "name",
+    "email",
+    "phone",
+    "address"
+  ],
+  "permitted_fields": [
+    "note_id",
+    "date",
+    "service",
+    "outcome",
+    "source_id",
+    "quote"
+  ]
+}

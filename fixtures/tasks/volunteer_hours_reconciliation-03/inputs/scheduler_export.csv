@@ -1,0 +1,5 @@
+person_id,shift_id,hours
+PERSON-A,SHIFT-A,2
+PERSON-B,SHIFT-B,3
+PERSON-C,SHIFT-C,4
+PERSON-A,SHIFT-A,2
