@@ -4,7 +4,7 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const DEFAULT_CONFIG = {
-  version: 2, defaultProvider: 'bonsai8',
+  version: 2, workers: {}, defaultProvider: 'bonsai8',
   providers: {
     bonsai8: { kind: 'local', adapter: 'ollama', model: 'bonsai-8b:latest', baseUrl: 'http://127.0.0.1:11434', context: 4096, maxTokens: 1024, enabled: true },
     qwen7: { kind: 'local', adapter: 'ollama', model: 'qwen2.5:7b', baseUrl: 'http://127.0.0.1:11434', context: 4096, maxTokens: 1024, enabled: true },

@@ -4,9 +4,9 @@ The practical opportunity is inexpensive, inspectable work on recurring accounta
 
 Today the M4 Pro laptop runs the coordinator, document tools, SQLite ledger and one local inference request at a time. The configured small models were already installed. Bonsai 8B and Qwen 2.5 7B are compared as complete task workers, including their failures and repairs. Parameter count alone is not a routing rule.
 
-The Dell GB10 and 48GB M5 are later workers. The first fleet experiment should preserve the same task contracts and instrumentation while replacing the inference endpoint behind an authenticated local gateway. The current build intentionally rejects non-loopback endpoints, so remote LAN inference requires an explicit implementation and new boundary tests. Do not pretend that simply editing the URL enables the fleet.
+The 48GB M5 Pro now has authenticated SSH access and has completed a real volunteer reconciliation workflow. The new SSH stdio relay preserves loopback model servers and sends bounded requests to the worker without a LAN HTTP listener. Per-worker usage and before/after resource snapshots are recorded separately. Qualification of its larger models and five-workflow routing remains in progress. See [two-Mac setup](TWO-MAC-SETUP.md). The Dell GB10 remains a later worker when prepared.
 
-PAIR is a candidate for later model placement/routing experiments, not a dependency of this laptop build. Model hosting across machines is not pooled unified memory. Exact runtime support, networking and deployment should be verified when those machines are available. Qwen 3.8 27B is not the same installed artifact as Bonsai 27B; this build does not claim to have tested the former.
+PAIR is a candidate for later model placement/routing experiments, not a dependency of this laptop build. Model hosting across machines is not pooled unified memory. Exact runtime support, networking and deployment should be verified when those machines are available. Qwen 3.8 27B is not the same artifact as Bonsai 27B. Its installed MLX 4-bit variant on the M5 passes a structured probe with reasoning disabled; this probe alone does not establish workflow capability.
 
 An initial fleet could assign these responsibilities:
 

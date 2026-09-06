@@ -11,7 +11,7 @@ export async function accountedProbe(config, profile, probe=testProvider) {
  try {
   store.createRun({id,workflow:'qualification/structured_probe',runType:'qualification',config,profile,status:'running'});
   sampler=startResourceSampler(sample=>store.event(id,'resource.sample',sample),{intervalMs:1000});
-  store.event(id,'model.request.started',{attemptId,profile});
+  store.event(id,'model.request.started',{attemptId,profile,workerId:config.providers?.[profile]?.workerId??'coordinator',transport:config.providers?.[profile]?.workerId?'ssh':'loopback'});
   try {
    const result=await probe(config,profile);
    store.event(id,'model.request.finished',{attemptId,profile,...result.metrics,success:true});

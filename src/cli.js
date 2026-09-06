@@ -17,6 +17,7 @@ const HELP=`wm — local accountability workflow lab
   wm task list|show ID
   wm task run ID [--provider NAME]
   wm provider list|test NAME
+  wm fleet list|inventory WORKER_ID
   wm run list|status|resume|cancel [RUN_ID]
   wm trace RUN_ID
   wm usage [--run-id RUN_ID]
@@ -55,6 +56,10 @@ export async function main(argv){
       catch(error){report.profiles.push({profile:name,status:c.providers[name]?.enabled?'unavailable':'disabled',reason:error.message});}
     }
     print(report);return;
+  }
+  if(group==='fleet'){
+    if(sub==='list'){print(Object.entries(c.workers??{}).map(([workerId])=>({workerId,transport:'ssh',profiles:Object.entries(c.providers).filter(([,p])=>p.workerId===workerId).map(([name])=>name)})));return;}
+    if(sub==='inventory'){const {workerInventory}=await import('./fleet/inventory.js');print(await workerInventory(id,c.workers?.[id]));return;}
   }
   if(group==='provider'){
     if(sub==='list'){print(Object.entries(c.providers).map(([name,p])=>({name,...p})));return;}

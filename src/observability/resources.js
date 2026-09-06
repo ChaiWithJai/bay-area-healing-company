@@ -9,14 +9,15 @@ export function parseServerProcesses(stdout) {
   const rows=stdout.split('\n').flatMap(line=>{
     const match=line.match(/^\s*(\d+)\s+(\d+)\s+(\d+)\s+([\d.]+)\s+(.+?)\s*$/);
     if(!match)return [];
-    const name=path.basename(match[5]);
-    return [{pid:Number(match[1]),ppid:Number(match[2]),name,rssBytes:Number(match[3])*1024,cpuPercent:Number(match[4])}];
+    const name=match[5].endsWith('/.lmstudio/.internal/utils/node')?'lmstudio-runtime-node':path.basename(match[5]);
+    const lmstudioRuntime=match[5].endsWith('/.lmstudio/.internal/utils/node');
+    return [{pid:Number(match[1]),ppid:Number(match[2]),name,lmstudioRuntime,rssBytes:Number(match[3])*1024,cpuPercent:Number(match[4])}];
   });
   const rootName=/^(ollama(?:_llama_server)?|llmster|llama-server|LM Studio(?: Helper(?: \([\w ]+\))?)?)$/i;
-  const selected=new Set(rows.filter(r=>rootName.test(r.name)).map(r=>r.pid));
+  const selected=new Set(rows.filter(r=>r.lmstudioRuntime||rootName.test(r.name)).map(r=>r.pid));
   let changed=true;
   while(changed) {changed=false;for(const row of rows)if(selected.has(row.ppid)&&!selected.has(row.pid)){selected.add(row.pid);changed=true;}}
-  return rows.filter(r=>selected.has(r.pid)).map(r=>({...r,name:rootName.test(r.name)?r.name:'inference-descendant',attribution:rootName.test(r.name)?'known-executable':'descendant-of-known-executable'}));
+  return rows.filter(r=>selected.has(r.pid)).map(({lmstudioRuntime,...r})=>({...r,name:lmstudioRuntime||rootName.test(r.name)?r.name:'inference-descendant',attribution:lmstudioRuntime||rootName.test(r.name)?'known-executable':'descendant-of-known-executable'}));
 }
 export async function collectHostResources({platform=process.platform,run=exec}={}) {
   const data={serverProcesses:null,serverRssBytes:null,serverCpuPercent:null,

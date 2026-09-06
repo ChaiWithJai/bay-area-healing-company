@@ -181,3 +181,22 @@ test('source-validation failure gets one repair then a bounded local alternative
  try {const finished=store.events(result.runId).filter(e=>e.type==='model.request.finished');assert.deepEqual(finished.map(e=>e.data.success),[false,false,true]);assert.equal(finished.reduce((n,e)=>n+e.data.inputTokens,0),30);assert.equal(store.getSteps(result.runId)[0].profile,'qwen7');}
  finally{store.close();}
 });
+
+test('LM Studio records actual loaded context and forwards explicitly configured reasoning control',async t=>{
+ let received;
+ const base=await server(t,(req,res)=>{
+  if(req.url==='/v1/models')return res.end(JSON.stringify({data:[{id:profile.model}]}));
+  if(req.url==='/api/v1/models')return res.end(JSON.stringify({models:[{key:'qualified/model',quantization:{name:'4bit'},loaded_instances:[{id:profile.model,config:{context_length:8192}}]}]}));
+  if(req.url==='/v1/chat/completions'){let raw='';req.on('data',b=>raw+=b);req.on('end',()=>{received=JSON.parse(raw);res.end('data: '+JSON.stringify({choices:[{delta:{content:'{"ok":true}'},finish_reason:'stop'}],usage:{prompt_tokens:5,completion_tokens:4}})+'\n\ndata: [DONE]\n\n');});return;}
+  res.writeHead(404).end();
+ });
+ const c=providerConfig(base,'lmstudio');c.providers.small.reasoningEffort='none';
+ const r=await getProvider(c).generate({system:'',prompt:'Return JSON',schema:{type:'object'}});
+ assert.equal(received.reasoning_effort,'none');assert.equal(r.metrics.runtimeContext,8192);assert.equal(r.metrics.context,4096);assert.equal(r.metrics.workerId,'coordinator');
+ assert.equal(r.metrics.modelDigest,null);
+});
+
+test('LM Studio refuses advertised loaded context smaller than request budget',async t=>{
+ const base=await server(t,(req,res)=>res.end(JSON.stringify(req.url==='/v1/models'?{data:[{id:profile.model}]}:{models:[{loaded_instances:[{id:profile.model,config:{context_length:2048}}]}]})));
+ await assert.rejects(getProvider(providerConfig(base,'lmstudio')).describe(),/below configured/);
+});

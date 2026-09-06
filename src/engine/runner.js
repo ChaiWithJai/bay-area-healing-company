@@ -73,7 +73,7 @@ export async function runWorkflow({spec,config,providerName,inputDir,outputDir,r
           if(prompt.length+item.system.length+JSON.stringify(item.schema).length>config.limits.maxPromptChars){feedback='Prompt exceeds configured bounded context; no silent truncation';store.event(id,'step.context_blocked',{stepId:item.id,profile});break;}
           const attemptId=randomUUID(),start=Date.now();attempts++;
           const tracePath=path.join(config.stateDir,'runs',id,'attempts',`${attemptId}.json`);
-          store.event(id,'model.request.started',{attemptId,stepId:item.id,profile,repair});
+          store.event(id,'model.request.started',{attemptId,stepId:item.id,profile,repair,workerId:config.providers?.[profile]?.workerId??'coordinator',transport:config.providers?.[profile]?.workerId?'ssh':'loopback'});
           let generated,recorded=false;
           try {
             if(!providers.has(profile))providers.set(profile,providerFactory(config,profile));

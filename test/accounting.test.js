@@ -1,4 +1,6 @@
 import test from 'node:test';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { mkdtemp, rm, readFile } from 'node:fs/promises';
 import os from 'node:os';
@@ -23,3 +25,48 @@ test('runtime local-only policy claims require saved local policy and valid loca
 
 test('unfinished started requests survive reopen and count once with unknown usage until finish',async t=>{const {store,dir}=await fixture(t);store.event('r1','model.request.started',{attemptId:'crash',profile:'small',model:'small',inputTokens:99});store.event('r1','model.request.started',{attemptId:'crash',profile:'small',model:'small'});const reopened=new RunStore(dir);let usage=summarizeUsage(reopened);assert.equal(usage.attempts,1);assert.equal(usage.incomplete,1);assert.equal(usage.unknownOutcome,1);assert.equal(usage.failed,0);assert.equal(usage.tokensKnown.input,null);assert.equal(usage.metrics.inputTokens.coverage,0);reopened.close();store.event('r1','model.request.finished',{attemptId:'crash',success:true,inputTokens:20,outputTokens:5,durationMs:100});usage=summarizeUsage(store);assert.equal(usage.attempts,1);assert.equal(usage.incomplete,0);assert.equal(usage.unknownOutcome,0);assert.equal(usage.successful,1);assert.equal(usage.tokensKnown.input,20);assert.equal(usage.byModel.small.attempts,1);});
 test('attempt IDs are scoped to runs and incomplete dispatches contribute to workflow costs',async t=>{const {store}=await fixture(t);store.updateRun('r1',{status:'completed'});store.event('r1','model.request.finished',{attemptId:'same',success:true,durationMs:10});store.createRun({id:'other',workflow:'notes',status:'running'});store.event('other','model.request.started',{attemptId:'same'});const usage=summarizeUsage(store);assert.equal(usage.attempts,2);assert.equal(usage.incomplete,1);assert.equal(usage.perAcceptedRun.attempts,2);assert.equal(usage.metrics.durationMs.coverage,0.5);});
+test('mixed workers retain failed and incomplete usage with distinct host resource scopes',async t=>{
+ const {store}=await fixture(t);
+ store.event('r1','resource.sample',{processRssBytes:100,serverRssBytes:200});
+ store.event('r1','model.request.finished',{attemptId:'local',success:true,model:'small',inputTokens:10,outputTokens:3,durationMs:100});
+ store.event('r1','model.request.started',{attemptId:'remote',workerId:'mac48',transport:'ssh',profile:'remote'});
+ store.event('r1','model.request.finished',{attemptId:'remote',success:false,inputTokens:20,durationMs:300,workerResources:{before:{serverRssBytes:800,serverCpuPercent:15,hostSwapUsedBytes:10,hostMemoryPressure:{label:'normal'}},after:{serverRssBytes:900,serverCpuPercent:25,hostSwapUsedBytes:12,hostMemoryPressure:{label:'warning'}}}});
+ store.event('r1','model.request.started',{attemptId:'interrupted',workerId:'mac48',transport:'ssh'});
+ const u=summarizeUsage(store);
+ assert.equal(u.attempts,3);assert.equal(u.byWorker.coordinator.attempts,1);assert.equal(u.byWorker.mac48.attempts,2);
+ assert.equal(u.byWorker.mac48.failed,1);assert.equal(u.byWorker.mac48.incomplete,1);
+ assert.equal(u.byWorker.mac48.metrics.inputTokens.coverage,0.5);assert.equal(u.byWorker.mac48.tokensKnown.input,20);
+ assert.equal(u.byWorker.mac48.byTransport.ssh.metrics.durationMs.sum,300);
+ assert.equal(u.byWorker.mac48.resources.serverSampledPeakRssBytes,900);
+ assert.equal(u.byWorker.mac48.resources.hostMemoryPressureCounts.warning,1);
+ assert.equal(u.resources.serverSampledPeakRssBytes,200);assert.match(u.resources.scope,/coordinator/);
+ assert.equal(u.byWorker.coordinator.resources.serverSampledPeakRssBytes,null);
+ assert.equal(u.byTransport.ssh.attempts,2);
+});
+test('remote missing metrics stay unknown and export omits SSH connection details',async t=>{
+ const {store,dir}=await fixture(t);
+ store.event('r1','model.request.finished',{attemptId:'remote',success:false,workerId:'mac48',transport:'ssh',sshHost:'PRIVATE_HOST',sshUser:'PRIVATE_USER',workerResources:{before:{serverRssBytes:null,hostname:'PRIVATE_HOST',hostMemoryPressure:{label:'PRIVATE_LABEL'}},after:null}});
+ store.event('r1','model.request.started',{attemptId:'unknown',transport:'ssh',workerId:'PRIVATE_USER@PRIVATE_HOST'});
+ const u=summarizeUsage(store);
+ assert.equal(u.byWorker.mac48.resources.serverSampledPeakRssBytes,null);assert.equal(u.byWorker.mac48.resources.serverRssKnownSamples,0);
+ assert.equal(u.byWorker.mac48.tokensKnown.input,null);assert.equal(u.byWorker['unknown-worker'].incomplete,1);
+ const exports=await exportReport(store,'r1',path.join(dir,'workers-report'));
+ for(const file of Object.values(exports)){const text=await readFile(file,'utf8');assert.ok(!text.includes('PRIVATE_'));}
+ const report=JSON.parse(await readFile(exports.json,'utf8'));
+ assert.deepEqual(report.workers.sort((a,b)=>a.workerId.localeCompare(b.workerId)),[{workerId:'mac48',transport:'ssh'},{workerId:'unknown-worker',transport:'ssh'}]);
+ assert.match(await readFile(exports.workersCsv,'utf8'),/mac48/);
+});
+
+test('SSH policy substantiation requires valid referenced private LAN worker settings',async t=>{const {store}=await fixture(t);const config={policy:{localOnly:true,cloudEnabled:false},providers:{remote:{enabled:true,kind:'local',adapter:'ollama',model:'bonsai',baseUrl:'http://127.0.0.1:11434',workerId:'mac48'}}};store.updateRun('r1',{config});assert.equal(summarizeUsage(store).runtimePolicy.localOnlySubstantiated,false);for(const worker of [{host:'8.8.8.8',user:'worker'},{host:'192.168.1.5',user:'unsafe@account'},{host:'192.168.1.5',user:'worker',port:0}]){store.updateRun('r1',{config:{...config,workers:{mac48:worker}}});assert.equal(summarizeUsage(store).runtimePolicy.localOnlySubstantiated,false);}store.updateRun('r1',{config:{...config,workers:{mac48:{host:'192.168.1.5',user:'worker'}}}});const u=summarizeUsage(store);assert.equal(u.runtimePolicy.localOnlySubstantiated,true);assert.equal(u.runtimePolicy.paidRuntimeApiConfigured,false);assert.match(u.runtimePolicy.evidence,/SSH-to-private-LAN/);assert.equal(u.costs.paidInferenceApiDollars,null);});
+
+test('LM Studio runtime embedded under another UI is recognized by exact path suffix only',()=>{const input='100 1 999 1 /Applications/Bionic.app/Contents/MacOS/Bionic\n101 100 1600000 10 /Users/private-user/.lmstudio/.internal/utils/node\n102 101 400 2 /private/backend-python\n103 100 500 2 /usr/local/bin/node\n104 1 700 3 /Users/private-user/.lmstudio/.internal/utils/node-other\n';const rows=parseServerProcesses(input);assert.deepEqual(rows.map(r=>r.pid),[101,102]);assert.equal(rows[0].name,'lmstudio-runtime-node');assert.equal(rows[1].name,'inference-descendant');assert.ok(!JSON.stringify(rows).includes('private-user'));assert.ok(!JSON.stringify(rows).includes('Bionic'));assert.equal(rows[0].rssBytes,1600000*1024);});
+
+test('worker relay mirrors exact LM Studio node-root and descendant accounting',()=>{const relay=fileURLToPath(new URL('../tools/worker_relay.py',import.meta.url));const code=`import runpy,sys
+m=runpy.run_path(sys.argv[1])
+f=m['resources']
+f.__globals__['cmd']=lambda args: '100 1 999 1 /Applications/Bionic.app/Contents/MacOS/Bionic\\n101 100 1600000 10 /Users/private-user/.lmstudio/.internal/utils/node\\n102 101 400 2 /private/backend-python\\n103 100 500 2 /usr/local/bin/node\\n104 1 700 3 /Users/private-user/.lmstudio/.internal/utils/node-other' if args[0]=='/bin/ps' else None
+r=f()
+assert r['serverRssBytes']==1600400*1024
+assert r['serverCpuPercent']==12
+assert r['acceleratorAllocationMeasured'] is False
+`;execFileSync('python3',['-c',code,relay]);});
