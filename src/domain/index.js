@@ -86,8 +86,14 @@ export async function prepareWorkflow(id,inputDir,config={}) {
     const notes=context.sources.filter(s=>s.path.includes('notes_raw'));
     if(!notes.length)context.problems.push('No case notes supplied');
     const contract=caseContract(context);
-    const schema={type:'object',additionalProperties:false,required:contract.modelFields,properties:Object.fromEntries(contract.modelFields.map(f=>[f,S]))};
-    notes.forEach((src,i)=>item(context,`case-${i}`,'case_extract',src,`Extract ${contract.modelFields.filter(f=>f!=='quote').join(', ')} using exact substrings from this note. The quote MUST contain ALL nonempty extracted fields in one exact contiguous source block. For separate Date, Service and Outcome lines, copy the whole block from Date through Outcome, stopping before Name or Email. Preserve line breaks as JSON escapes. NEVER copy names, email addresses or telephone numbers. Use empty strings only when absent or explicitly contradictory; do not drop present fields to repair a quote. [REDACTED PROHIBITED FIELD] marks removed private content and is not source text: never include that marker in a quote or join text across it.\n${minimizeCasePrompt(src.text,context.policy)}`,schema,{noteId:basename(src.path).replace(/\.[^.]+$/,''),ambiguousOutcome:new Set([...src.text.matchAll(/(?:^|[.\n|])\s*Outcome(?: recorded)?\s*[:=]\s*([^.\n|]+)/gi)].map(m=>norm(m[1]))).size>1}));
+    notes.forEach((src,i)=>{
+      // Every enum value is an untouched contiguous substring of the source.
+      // Removed private spans create boundaries; never join across them.
+      const blocks=[...new Set(minimizeCasePrompt(src.text,context.policy).split('[REDACTED PROHIBITED FIELD]').map(block=>block.trim()).filter(Boolean))];
+      const schema={type:'object',additionalProperties:false,required:contract.modelFields,properties:Object.fromEntries(contract.modelFields.map(f=>[f,f==='quote'?{type:'string',enum:['',...blocks]}:S]))};
+      const displayed=blocks.map((block,index)=>`SOURCE BLOCK ${index+1}\n${block}\nEND SOURCE BLOCK ${index+1}`).join('\n\n');
+      item(context,`case-${i}`,'case_extract',src,`Extract ${contract.modelFields.filter(f=>f!=='quote').join(', ')} using exact substrings from the source blocks below. Select quote exactly from the schema enum: one whole source block supporting ALL nonempty extracted fields. Never concatenate blocks or include boundary labels. Empty strings mean absent or explicitly contradictory information, not permission to drop visible fields. No block crosses removed private content. If required evidence spans separate blocks, leave unsupported fields empty for human review.\n\n${displayed}`,schema,{noteId:basename(src.path).replace(/\.[^.]+$/,''),ambiguousOutcome:new Set([...src.text.matchAll(/(?:^|[.\n|])\s*Outcome(?: recorded)?\s*[:=]\s*([^.\n|]+)/gi)].map(m=>norm(m[1]))).size>1});
+    });
   } else if(id==='nonprofit/board_report_synthesis') {
     context.metrics=rows(requireSource(context,'metrics_q1_q4.csv'));
     context.financials=rows(requireSource(context,'financials.xlsx'));

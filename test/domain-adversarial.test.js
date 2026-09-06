@@ -120,6 +120,8 @@ test('case requests minimize labeled PII while original evidence remains authori
   await writeFile(join(directory,'pii_policy.json'),JSON.stringify({prohibited_fields:['name','email','address']}));
   const plan=await prepareWorkflow('nonprofit/case_note_normalization',directory),i=plan.items[0];
   assert.equal(i.sourceText,source);
+  assert.deepEqual(i.schema.properties.quote.enum,['',source.split('\nName:')[0]]);
+  assert.ok(i.schema.properties.quote.enum.every(block=>block===''||source.includes(block)));
   for(const privateValue of ['Private Person','private@example.invalid','42 Private Street'])assert.equal(i.prompt.includes(privateValue),false);
   assert.match(i.prompt,/Date: 2026-09-01\nService: Coaching\nOutcome: completed/);
   const clean=source.split('\nName:')[0];
@@ -134,6 +136,9 @@ test('PII redaction does not join discontiguous allowed fields into fabricated e
   await writeFile(join(directory,'target_schema.json'),JSON.stringify({fields:['date','service','outcome','quote'],required:['date','service','outcome']}));
   await writeFile(join(directory,'pii_policy.json'),JSON.stringify({prohibited_fields:['name']}));
   const plan=await prepareWorkflow('nonprofit/case_note_normalization',directory),i=plan.items[0];
-  assert.match(i.prompt,/Date: 2026-09-01\n\[REDACTED PROHIBITED FIELD\]\nService: Coaching/);
+  assert.deepEqual(i.schema.properties.quote.enum,['','Date: 2026-09-01','Service: Coaching\nOutcome: completed']);
+  assert.match(i.prompt,/END SOURCE BLOCK 1/);
+  assert.match(i.prompt,/SOURCE BLOCK 2/);
+  assert.equal(i.prompt.includes('[REDACTED PROHIBITED FIELD]'),false);
   assert.equal(validateWorkItem(i,{date:'2026-09-01',service:'Coaching',outcome:'completed',quote:'Date: 2026-09-01\nService: Coaching\nOutcome: completed'},plan.context).pass,false);
 });
