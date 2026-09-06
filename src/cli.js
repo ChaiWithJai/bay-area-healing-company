@@ -17,7 +17,9 @@ const HELP=`wm — local accountability workflow lab
   wm task list|show ID
   wm task run ID [--provider NAME]
   wm provider list|test NAME
-  wm fleet list|inventory WORKER_ID
+  wm fleet list|inventory|context WORKER_ID
+  wm fleet quarantine WORKER_ID
+  wm fleet clear-quarantine WORKER_ID --idle-verified
   wm run list|status|resume|cancel [RUN_ID]
   wm trace RUN_ID
   wm usage [--run-id RUN_ID]
@@ -33,7 +35,7 @@ Runs are isolated, checkpointed, and accounted in .wm/runs.sqlite.
 const print=x=>console.log(typeof x==='string'?x:JSON.stringify(x,null,2));
 export async function taskCatalog(){return JSON.parse(await readFile(path.join(ROOT,'fixtures','catalog.json'),'utf8'));}
 export async function main(argv){
-  const {positionals:pos,values:v}=parseArgs({args:argv,allowPositionals:true,options:{help:{type:'boolean',short:'h'},probe:{type:'boolean'},json:{type:'boolean'},provider:{type:'string'},'input-dir':{type:'string'},'output-dir':{type:'string'},'run-id':{type:'string'},split:{type:'string'},repetitions:{type:'string'},'max-runs':{type:'string'},task:{type:'string'}}});
+  const {positionals:pos,values:v}=parseArgs({args:argv,allowPositionals:true,options:{help:{type:'boolean',short:'h'},probe:{type:'boolean'},json:{type:'boolean'},'idle-verified':{type:'boolean'},provider:{type:'string'},'input-dir':{type:'string'},'output-dir':{type:'string'},'run-id':{type:'string'},split:{type:'string'},repetitions:{type:'string'},'max-runs':{type:'string'},task:{type:'string'}}});
   const [group,sub,id]=pos;
   if(!group||group==='help'||v.help){print(HELP);return;}
   const c=await loadConfig();
@@ -60,6 +62,13 @@ export async function main(argv){
   if(group==='fleet'){
     if(sub==='list'){print(Object.entries(c.workers??{}).map(([workerId])=>({workerId,transport:'ssh',profiles:Object.entries(c.providers).filter(([,p])=>p.workerId===workerId).map(([name])=>name)})));return;}
     if(sub==='inventory'){const {workerInventory}=await import('./fleet/inventory.js');print(await workerInventory(id,c.workers?.[id]));return;}
+    if(sub==='context'){const {readWorkerTelemetry,decideAdmission}=await import('./fleet/telemetry.js');const snapshot=await readWorkerTelemetry(c,id??'coordinator');print({snapshot,admission:decideAdmission(snapshot,c.admission??{})});return;}
+    if(sub==='quarantine'||sub==='clear-quarantine'){
+      if(id!=='coordinator'&&!c.workers?.[id])throw new Error('Select a configured worker or coordinator');
+      if(sub==='clear-quarantine'&&!v['idle-verified'])throw new Error('Verify the worker runtime has stopped or is idle, then explicitly pass --idle-verified. Telemetry alone does not establish idleness.');
+      const {CoordinatorLeases}=await import('./fleet/leases.js');const leases=new CoordinatorLeases(path.join(c.stateDir,'coordinator-leases.sqlite'));
+      try{print(sub==='quarantine'?{workerId:id,quarantine:leases.inspectQuarantine(id)}:leases.clearQuarantine(id,{attestation:'runtime-stopped-or-idle-verified'}));}finally{leases.close();}return;
+    }
   }
   if(group==='provider'){
     if(sub==='list'){print(Object.entries(c.providers).map(([name,p])=>({name,...p})));return;}

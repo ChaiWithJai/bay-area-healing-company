@@ -8,6 +8,7 @@ import { assertLocalEndpoint, validateProfile, getProvider } from '../src/provid
 import { DEFAULT_CONFIG } from '../src/config.js';
 import { acquireLock, parseResult, runWorkflow } from '../src/engine/runner.js';
 import { RunStore } from '../src/observability/index.js';
+import { CoordinatorLeases } from '../src/fleet/leases.js';
 import { gatesPassed, runStructuralGates } from '../src/engine/gates.js';
 
 const schema={type:'object',additionalProperties:false,required:['quote','reason'],properties:{quote:{type:'string'},reason:{type:'string'}}};
@@ -69,13 +70,13 @@ test('chunked local output validates and preserves measured usage',async t=>{
 test('incomplete stream fails with unknown token accounting, never zero',async t=>{
   const base=await server(t,ollamaHandler((_req,res)=>res.end(JSON.stringify({message:{content:'{"quote":'},done:false})+'\n')));
   await assert.rejects(getProvider(providerConfig(base)).generate({system:'',prompt:'',schema}),error=>{
-    assert.match(error.message,/Incomplete/);assert.equal(error.metrics.inputTokens,null);assert.equal(error.metrics.outputTokens,null);assert.ok(error.metrics.partialOutputChars>0);return true;
+    assert.match(error.message,/Incomplete/);assert.equal(error.metrics.workerIdleUncertain,true);assert.equal(error.metrics.inputTokens,null);assert.equal(error.metrics.outputTokens,null);assert.ok(error.metrics.partialOutputChars>0);return true;
   });
 });
 
 test('token-limit completion is rejected even when partial text is valid JSON',async t=>{
   const base=await server(t,ollamaHandler((_req,res)=>res.end(JSON.stringify({message:{content:JSON.stringify(answer)},done:true,done_reason:'length',eval_count:128})+'\n')));
-  await assert.rejects(getProvider(providerConfig(base)).generate({system:'',prompt:'',schema}),/truncated/);
+  await assert.rejects(getProvider(providerConfig(base)).generate({system:'',prompt:'',schema}),error=>{assert.match(error.message,/truncated/);assert.equal(error.metrics.workerIdleUncertain,false);return true;});
 });
 
 async function setup(t) {
@@ -142,11 +143,13 @@ test('refused same-run lock cannot change active owner status',async t=>{
   const args=await setup(t),id='active-owner';
   const store=new RunStore(args.config.stateDir);
   store.createRun({id,workflow:args.spec.id,status:'running',inputDir:args.root,outputDir:args.config.outputDir});
-  const release=await acquireLock(args.config.stateDir,id);
+  const leases=new CoordinatorLeases(path.join(args.config.stateDir,'coordinator-leases.sqlite'));
+  const lease=await leases.acquire({resource:`run:${id}`,runId:id});
+  const before=store.getRun(id);
   try {
     await assert.rejects(runWorkflow({...args,runId:id}),/Another coordinator/);
-    assert.equal(store.getRun(id).status,'running');
-  } finally {await release();store.close();}
+    assert.deepEqual(store.getRun(id),before);
+  } finally {leases.release(lease);leases.close();store.close();}
 });
 
 test('new unimplemented spec gate cannot silently disappear at runtime',async t=>{
@@ -163,7 +166,7 @@ test('cancelled streaming request records partial output and unknown usage',asyn
     res.write(JSON.stringify({message:{content:'partial evidence'},done:false})+'\n');
   }));
   await assert.rejects(getProvider(providerConfig(base)).generate({system:'',prompt:'',schema,signal:controller.signal,onToken:()=>controller.abort(new Error('user cancelled'))}),error=>{
-    assert.equal(error.metrics.cancelled,true);
+    assert.equal(error.metrics.cancelled,true);assert.equal(error.metrics.workerIdleUncertain,true);
     assert.ok(error.metrics.partialOutputChars>0);
     assert.equal(error.metrics.inputTokens,null);
     assert.equal(error.metrics.outputTokens,null);

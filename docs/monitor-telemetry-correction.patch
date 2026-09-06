@@ -1,0 +1,40 @@
+--- a/server.js
++++ b/server.js
+@@ -350,2 +350,3 @@
+-  const load = metrics.cpu.percent > 75 || metrics.memory.percent > 85 ? "high" : metrics.cpu.percent > 40 ? "medium" : "low";
+-  const bottleneck = metrics.memory.percent > 85
++  const nativePressureHigh = (metrics.memory.pressureLevel ?? 1) >= 2;
++  const load = nativePressureHigh || metrics.cpu.percent > 75 || metrics.memory.percent > 85 ? "high" : metrics.cpu.percent > 40 ? "medium" : "low";
++  const bottleneck = nativePressureHigh || metrics.memory.percent > 85
+@@ -360 +361 @@
+-  const risk = metrics.memory.percent > 88 ? "Fragmentation and stalls" : metrics.cpu.percent > 80 ? "Throughput saturation" : "Moderate";
++  const risk = nativePressureHigh ? "Native memory pressure warning or critical" : metrics.memory.percent > 88 ? "Fragmentation and stalls" : metrics.cpu.percent > 80 ? "Throughput saturation" : "Moderate";
+@@ -362,2 +363,2 @@
+-  const nextAction = metrics.memory.percent > 85
+-    ? "Prune background apps, close stale demo runs, and promote only the cases worth keeping."
++  const nextAction = nativePressureHigh || metrics.memory.percent > 85
++    ? "Pause new heavy inference; let current work finish and recheck native memory pressure."
+@@ -372 +373,2 @@
+-  const pageSize = 4096;
++  const pageSize = Number(text.match(/page size of (\d+) bytes/)?.[1]);
++  if (!Number.isInteger(pageSize) || pageSize <= 0) throw new Error("Unsupported vm_stat page-size header");
+@@ -385 +387 @@
+-  return { total, used: Math.max(used, wired + compressed), percent: (Math.max(used, wired + compressed) / total) * 100 };
++  return { total, used: Math.min(total, Math.max(used, wired + compressed)), percent: (Math.min(total, Math.max(used, wired + compressed)) / total) * 100, pageSizeBytes: pageSize, measurementMethod: "vm_stat reported page size; working-set estimate, not native memory pressure" };
+@@ -398 +400 @@
+-  const [cpuLines, dfOut, vmOut, psOut, gpu, network, projects] = await Promise.all([
++  const [cpuLines, dfOut, vmOut, psOut, gpu, network, projects, nativePressure] = await Promise.all([
+@@ -405 +407,2 @@
+-    getProjects()
++    getProjects(),
++    run("/usr/sbin/sysctl", ["-n", "kern.memorystatus_vm_pressure_level"]).catch(() => null)
+@@ -413,0 +417 @@
++  vm.pressureLevel = [1, 2, 4].includes(Number(nativePressure)) ? Number(nativePressure) : null;
+@@ -428 +432 @@
+-    memory: vm,
++    memory: { ...vm, pressure: [1, 2, 4].includes(Number(nativePressure)) ? { level: Number(nativePressure), label: ({1: "normal", 2: "warning", 4: "critical"})[Number(nativePressure)], method: "kern.memorystatus_vm_pressure_level" } : null },
+@@ -437,0 +442 @@
++    agentStarter: buildAgentStarter(),
+@@ -472 +477 @@
+-    version: "0.1.0",
++    version: "0.1.1",

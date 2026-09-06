@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "mode": "recommendations_only",
+  "selectionSplit": "development",
+  "sourceCodeDigest": "c83352a92dd3187603f4f1ce2a9087c73b2f4eaf08241c8ef6e92c44a56e5d30",
+  "rubricVersion": "2.2.0",
+  "campaignIds": [
+    "dev-two-mac-bonsai8-v1",
+    "dev-mac48-qwen27-mlx-v1"
+  ],
+  "measurements": [
+    {
+      "workflow": "nonprofit/board_report_synthesis",
+      "family": "board_evidence",
+      "profile": "bonsai8",
+      "campaignIds": [
+        "dev-two-mac-bonsai8-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 3354.6951536666797,
+      "knownInferenceAttempts": 14,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/board_report_synthesis",
+      "family": "board_evidence",
+      "profile": "mac48-qwen27-mlx",
+      "campaignIds": [
+        "dev-mac48-qwen27-mlx-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 18490.55352766672,
+      "knownInferenceAttempts": 12,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/case_note_normalization",
+      "family": "case_extract",
+      "profile": "bonsai8",
+      "campaignIds": [
+        "dev-two-mac-bonsai8-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 35394.45006899998,
+      "knownInferenceAttempts": 121,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/case_note_normalization",
+      "family": "case_extract",
+      "profile": "mac48-qwen27-mlx",
+      "campaignIds": [
+        "dev-mac48-qwen27-mlx-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 242072.79372366646,
+      "knownInferenceAttempts": 120,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/grant_cycle_package",
+      "family": "grant_evidence",
+      "profile": "bonsai8",
+      "campaignIds": [
+        "dev-two-mac-bonsai8-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 2117.899694666669,
+      "knownInferenceAttempts": 10,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/grant_cycle_package",
+      "family": "grant_evidence",
+      "profile": "mac48-qwen27-mlx",
+      "campaignIds": [
+        "dev-mac48-qwen27-mlx-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 14118.35519433328,
+      "knownInferenceAttempts": 9,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/stewardship_structuring",
+      "family": "stewardship_evidence",
+      "profile": "bonsai8",
+      "campaignIds": [
+        "dev-two-mac-bonsai8-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 2607.3785700000008,
+      "knownInferenceAttempts": 7,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/stewardship_structuring",
+      "family": "stewardship_evidence",
+      "profile": "mac48-qwen27-mlx",
+      "campaignIds": [
+        "dev-mac48-qwen27-mlx-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 12439.571013333392,
+      "knownInferenceAttempts": 6,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/volunteer_hours_reconciliation",
+      "family": "participation_extract",
+      "profile": "bonsai8",
+      "campaignIds": [
+        "dev-two-mac-bonsai8-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 1278.4930276666669,
+      "knownInferenceAttempts": 2,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    },
+    {
+      "workflow": "nonprofit/volunteer_hours_reconciliation",
+      "family": "participation_extract",
+      "profile": "mac48-qwen27-mlx",
+      "campaignIds": [
+        "dev-mac48-qwen27-mlx-v1"
+      ],
+      "referencePasses": 3,
+      "runs": 3,
+      "variantCounts": {
+        "ordinary": 1,
+        "conflict": 1,
+        "missing": 1
+      },
+      "measuredRuns": 3,
+      "meanMeasuredInferenceMs": 6626.168347333332,
+      "knownInferenceAttempts": 2,
+      "eligible": true,
+      "reasons": [],
+      "reviewStatus": [
+        "generated_unreviewed"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "workflow": "nonprofit/volunteer_hours_reconciliation",
+      "family": "participation_extract",
+      "decision": "propose",
+      "proposedProfile": "bonsai8",
+      "reason": "Lowest measured mean inference time among 2 eligible profiles; every supplied development repetition passed all three scenario types",
+      "meanMeasuredInferenceMs": 1278.4930276666669
+    },
+    {
+      "workflow": "nonprofit/case_note_normalization",
+      "family": "case_extract",
+      "decision": "propose",
+      "proposedProfile": "bonsai8",
+      "reason": "Lowest measured mean inference time among 2 eligible profiles; every supplied development repetition passed all three scenario types",
+      "meanMeasuredInferenceMs": 35394.45006899998
+    },
+    {
+      "workflow": "nonprofit/board_report_synthesis",
+      "family": "board_evidence",
+      "decision": "propose",
+      "proposedProfile": "bonsai8",
+      "reason": "Lowest measured mean inference time among 2 eligible profiles; every supplied development repetition passed all three scenario types",
+      "meanMeasuredInferenceMs": 3354.6951536666797
+    },
+    {
+      "workflow": "nonprofit/grant_cycle_package",
+      "family": "grant_evidence",
+      "decision": "propose",
+      "proposedProfile": "bonsai8",
+      "reason": "Lowest measured mean inference time among 2 eligible profiles; every supplied development repetition passed all three scenario types",
+      "meanMeasuredInferenceMs": 2117.899694666669
+    },
+    {
+      "workflow": "nonprofit/stewardship_structuring",
+      "family": "stewardship_evidence",
+      "decision": "propose",
+      "proposedProfile": "bonsai8",
+      "reason": "Lowest measured mean inference time among 2 eligible profiles; every supplied development repetition passed all three scenario types",
+      "meanMeasuredInferenceMs": 2607.3785700000008
+    }
+  ],
+  "proposedFamilyProfiles": {
+    "participation_extract": "bonsai8",
+    "case_extract": "bonsai8",
+    "board_evidence": "bonsai8",
+    "grant_evidence": "bonsai8",
+    "stewardship_evidence": "bonsai8"
+  },
+  "caveats": [
+    "Three synthetic, generated-unreviewed variants are weak qualification evidence, not production reliability or expert approval.",
+    "Reference passes include correctly surfaced review or abstention for incomplete cases; they do not mean every case yielded a complete substantive deliverable.",
+    "Mean inference duration includes all recorded attempts, repairs and failures within each run. It excludes document-tool time and is not end-to-end latency.",
+    "Missing durations remain unknown. Zero is used only where retained accounting establishes that no inference request occurred.",
+    "Model size is not an eligibility signal. This proposes the fastest measured eligible profile; no configuration is applied.",
+    "A routed baseline is reported but cannot be selected as an individual profile. Evaluate recommendations on held-out data only after selection."
+  ]
+}

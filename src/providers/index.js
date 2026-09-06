@@ -98,13 +98,13 @@ export function getProvider(c, name = c.defaultProvider) {
         if(p.adapter==='lmstudio'&&!finishReason)throw new Error('Incomplete runtime stream');
         const ns=k=>typeof final[k]==='number'?final[k]/1e6:null;
         return {text,metrics:{...identity,workerResources:workerResources(),durationMs:performance.now()-started,ttftMs,inputTokens:final.prompt_eval_count??final.usage?.prompt_tokens??null,outputTokens:final.eval_count??final.usage?.completion_tokens??null,cachedTokens:final.prompt_eval_cached_count??null,loadMs:ns('load_duration'),prefillMs:ns('prompt_eval_duration'),decodeMs:ns('eval_duration'),finishReason}};
-      } catch(error){error.metrics={...identity,workerResources:workerResources(),durationMs:performance.now()-started,ttftMs,inputTokens:final.prompt_eval_count??final.usage?.prompt_tokens??null,outputTokens:final.eval_count??final.usage?.completion_tokens??null,partialOutputChars:text.length,cancelled:signal?.aborted??false};throw error;}finally{clearTimeout(timer);}
+      } catch(error){error.metrics={...identity,workerResources:workerResources(),durationMs:performance.now()-started,ttftMs,inputTokens:final.prompt_eval_count??final.usage?.prompt_tokens??null,outputTokens:final.eval_count??final.usage?.completion_tokens??null,partialOutputChars:text.length,workerIdleUncertain:!(p.adapter==='ollama'?final.done:finishReason),cancelled:signal?.aborted??false};throw error;}finally{clearTimeout(timer);}
     },
     async complete(args){return(await this.generate(args)).text;}
   };
 }
-export async function testProvider(c,name){
-  const result=await getProvider(c,name).generate({system:'Return requested JSON.',prompt:'Return {"ok":true}.',schema:{type:'object',properties:{ok:{const:true}},required:['ok'],additionalProperties:false},maxTokens:64});
+export async function testProvider(c,name,{signal}={}){
+  const result=await getProvider(c,name).generate({system:'Return requested JSON.',prompt:'Return {"ok":true}.',schema:{type:'object',properties:{ok:{const:true}},required:['ok'],additionalProperties:false},maxTokens:64,signal});
   try{const value=JSON.parse(result.text);if(value.ok!==true||Object.keys(value).length!==1)throw new Error('Unexpected structured probe response');}
   catch(error){error.metrics=result.metrics;throw error;}
   return result;

@@ -64,7 +64,7 @@ def main():
     port, route, method = request['port'], request['path'], request['method']
     if type(port) is not int or not 1 <= port <= 65535:
         raise ValueError('Invalid port')
-    allowed = {'/api/tags':'GET', '/api/show':'POST', '/api/version':'GET',
+    allowed = {'/.well-known/agent.json':'GET', '/api/a2a/hello':'GET', '/api/context':'GET', '/api/metrics':'GET', '/api/health':'GET', '/api/tags':'GET', '/api/show':'POST', '/api/version':'GET',
                '/api/chat':'POST', '/api/v1/models':'GET', '/v1/models':'GET', '/v1/chat/completions':'POST'}
     if allowed.get(route) != method:
         raise ValueError('Unsupported runtime operation')

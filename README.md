@@ -106,9 +106,9 @@ npm test
 
 Tests use controlled model responses and real document/OCR tooling. They verify implementation behavior without a paid service or running model. Actual model execution is a separate experiment. See [architecture](docs/ARCHITECTURE.md) and [task catalog](docs/TASK-CATALOG.md) for the contracts and limitations.
 
-## Future fleet
+## Local fleet
 
-The GB10 and 48 GB Mac can later host additional model profiles and PAIR can distribute local inference. Current endpoint validation intentionally permits only this machine's HTTP loopback addresses. Fleet networking requires an explicit implementation change, qualification and fresh resource measurements. Qwen3.8 or any larger model remains an experiment until tested on the same deliverables.
+The 48GB M5 Pro now serves local models through an authenticated SSH relay. HTTP inference stays on each worker’s loopback interface. See the [two-Mac setup](docs/TWO-MAC-SETUP.md) for worker leases, opt-in capacity admission and measured Qwen3.8 27B results. `wm fleet context mac48` reads the worker’s telemetry without running inference. The GB10 awaits hardware onboarding; [PAIR integration](docs/PAIR-INTEGRATION.md) remains a separate qualification step.
 
 ## Measured demonstration
 
