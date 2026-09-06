@@ -1,0 +1,2 @@
+# Retain machine-readable evidence while keeping implementation review readable.
+docs/results/*.json linguist-generated=true

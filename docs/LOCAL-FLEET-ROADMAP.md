@@ -15,7 +15,7 @@ The immediate evidence favors the small model for these development cards while 
 | Component | Current or proposed role | Evidence still needed |
 | --- | --- | --- |
 | M4 coordinator | Prepare sources, validate evidence, render artifacts, retain traces and accounting | Graceful recovery verified; hard failures remain quarantined until explicit clearance |
-| M4 Bonsai 8B | Bounded extraction and evidence selection; development default candidate | 15/15 final routed references verified; three-repetition qualification underway |
+| M4 Bonsai 8B | Bounded extraction and evidence selection; development default candidate | 45/45 final routed references verified across three repetitions |
 | M5 Qwen3.8 27B MLX | Qualified for development workflows over SSH; larger local alternative | Capacity-aware concurrency verified with remote Qwen 7B; 27B held-out comparison underway |
 | Dell GB10 | Later larger or higher-precision model host | Authenticated inventory, runtime/artifact qualification, workload and resource measurements |
 | Astra through Codex | Software architecture, implementation, debugging, testing, and review | Concrete development artifacts and tests; no application inference role |
@@ -43,11 +43,11 @@ A pilot should preserve the SSH transport for comparison, use actual PAIR-displa
 
 ## Current evidence and remaining qualification
 
-[Two-Mac results](TWO-MAC-RESULTS.md) records 140 passing implementation tests, 15/15 final held-out routed references, concurrent grant artifacts passing on both Macs, and remote checkpoint recovery without duplicate accepted work. The final live reports share a source digest. Controlled process tests cover dead-owner quarantine; graceful live cancellation does not claim an orphaned backend was forcibly stopped.
+[Two-Mac results](TWO-MAC-RESULTS.md) records 144 passing implementation/reporting tests, 45/45 final held-out routed references across three repetitions, concurrent grant artifacts passing on both Macs, and remote checkpoint recovery without duplicate accepted work. The final live reports share a source digest. Controlled process tests cover dead-owner quarantine; graceful live cancellation does not claim an orphaned backend was forcibly stopped.
 
 Remaining qualification work:
 
-1. Complete three repetitions of the final routed held-out campaign; preserve failures and review outcomes.
+1. Routed repeatability is complete at 45/45; preserve its failures, repairs, 12 larger-model fallback responses and review outcomes.
 2. Test the larger M5 model on held-out cards under current capacity controls. Keep development-only qualification distinct from this result.
 3. Qualify the GB10 when prepared, then pilot PAIR without changing workflow or grading contracts.
 4. Obtain independently reviewed, permissioned operational data and human-time baselines before production or savings claims.
