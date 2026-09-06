@@ -17,12 +17,13 @@ import path from "node:path";
  * warns about ("if your gate passes on day one, it is not measuring
  * anything").
  */
-export function runStructuralGates(spec, outputDir) {
+export function runStructuralGates(spec, outputDir, { domainHandled = false } = {}) {
   const results = [];
 
   for (const relPath of spec.deliverable) {
     const abs = path.join(outputDir, relPath);
-    const exists = existsSync(abs);
+    const contained = path.relative(path.resolve(outputDir), path.resolve(abs));
+    const exists = !contained.startsWith('..') && !path.isAbsolute(contained) && existsSync(abs) && statSync(abs).isFile();
     results.push({
       id: `deliverable-exists:${relPath}`,
       pass: exists,
@@ -38,7 +39,7 @@ export function runStructuralGates(spec, outputDir) {
     }
   }
 
-  for (const gateText of spec.gates ?? []) {
+  for (const gateText of domainHandled ? [] : (spec.gates ?? [])) {
     results.push({
       id: `domain-gate:${gateText}`,
       pass: null,
@@ -50,5 +51,5 @@ export function runStructuralGates(spec, outputDir) {
 }
 
 export function gatesPassed(results) {
-  return results.every((r) => r.pass !== false);
+  return results.length > 0 && results.every((r) => r.pass === true);
 }

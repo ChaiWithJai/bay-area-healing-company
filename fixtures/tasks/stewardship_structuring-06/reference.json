@@ -1,0 +1,12 @@
+{
+  "workflow_id": "nonprofit/stewardship_structuring",
+  "variant": "missing",
+  "review_status": "generated_unreviewed",
+  "synthetic": true,
+  "asset_ids": [
+    "ASSET-1",
+    "ASSET-2"
+  ],
+  "unresolved_assets": 1,
+  "human_decision_required": true
+}

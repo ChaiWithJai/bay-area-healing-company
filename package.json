@@ -1,23 +1,33 @@
 {
   "name": "workflow-manager",
-  "version": "0.1.0",
-  "description": "Open-source, Waypoint-style workflow manager: define black-box workflows (inflow -> gate -> score -> deliverable), plug in cloud or local AI providers, and run them from the command line.",
+  "version": "0.2.0",
+  "description": "Local-only accountability workflows with verifiable artifacts, small-model routing, and resource accounting",
   "license": "MIT",
   "type": "module",
   "bin": {
     "wm": "./bin/wm.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=24"
   },
   "scripts": {
-    "test": "node --test test/*.test.js"
+    "test": "node scripts/test.mjs",
+    "demo": "node bin/wm.js task run volunteer_hours_reconciliation-01"
   },
   "files": [
     "bin",
     "src",
+    "tools",
     "workflows",
+    "fixtures",
+    "docs",
+    "requirements.txt",
     "README.md",
-    "LICENSE"
-  ]
+    "LICENSE",
+    "scripts",
+    "npm-shrinkwrap.json"
+  ],
+  "dependencies": {
+    "ajv": "8.18.0"
+  }
 }

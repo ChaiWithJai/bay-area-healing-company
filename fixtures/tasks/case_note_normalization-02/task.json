@@ -1,0 +1,15 @@
+{
+  "id": "case_note_normalization-02",
+  "workflow_id": "nonprofit/case_note_normalization",
+  "split": "development",
+  "variant": "conflict",
+  "inputs": "inputs",
+  "reference": "reference.json",
+  "provenance": {
+    "type": "synthetic",
+    "generated_by": "fixtures/generate.py",
+    "review_status": "generated_unreviewed",
+    "contains_real_personal_data": false
+  },
+  "expected_result": "review_or_blocked"
+}

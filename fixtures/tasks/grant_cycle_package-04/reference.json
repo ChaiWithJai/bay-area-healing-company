@@ -1,0 +1,13 @@
+{
+  "workflow_id": "nonprofit/grant_cycle_package",
+  "variant": "ordinary",
+  "review_status": "generated_unreviewed",
+  "synthetic": true,
+  "budget_total": 21000,
+  "requirement_ids": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "forbidden_charges": 0
+}

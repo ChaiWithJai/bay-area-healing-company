@@ -1,0 +1,40 @@
+{
+  "workflow_id": "nonprofit/board_report_synthesis",
+  "variant": "ordinary",
+  "review_status": "generated_unreviewed",
+  "synthetic": true,
+  "variance_rows": [
+    [
+      "Q1",
+      "Program",
+      10000,
+      9800,
+      -200
+    ],
+    [
+      "Q2",
+      "Program",
+      11000,
+      10900,
+      -100
+    ],
+    [
+      "Q3",
+      "Program",
+      12000,
+      12000,
+      0
+    ],
+    [
+      "Q4",
+      "Program",
+      13000,
+      13100,
+      100
+    ]
+  ],
+  "risk_ids": [
+    "RISK-A",
+    "RISK-B"
+  ]
+}

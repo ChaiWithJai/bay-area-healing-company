@@ -1,0 +1,288 @@
+{
+  "workflow_id": "nonprofit/case_note_normalization",
+  "variant": "ordinary",
+  "review_status": "generated_unreviewed",
+  "synthetic": true,
+  "records": [
+    {
+      "note_id": "N001",
+      "date": "2026-07-01",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N002",
+      "date": "2026-07-02",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N003",
+      "date": "2026-07-03",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N004",
+      "date": "2026-07-04",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N005",
+      "date": "2026-07-05",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N006",
+      "date": "2026-07-06",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N007",
+      "date": "2026-07-07",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N008",
+      "date": "2026-07-08",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N009",
+      "date": "2026-07-09",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N010",
+      "date": "2026-07-10",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N011",
+      "date": "2026-07-11",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N012",
+      "date": "2026-07-12",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N013",
+      "date": "2026-07-13",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N014",
+      "date": "2026-07-14",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N015",
+      "date": "2026-07-15",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N016",
+      "date": "2026-07-16",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N017",
+      "date": "2026-07-17",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N018",
+      "date": "2026-07-18",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N019",
+      "date": "2026-07-19",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N020",
+      "date": "2026-07-20",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N021",
+      "date": "2026-07-21",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N022",
+      "date": "2026-07-22",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N023",
+      "date": "2026-07-23",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N024",
+      "date": "2026-07-24",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N025",
+      "date": "2026-07-25",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N026",
+      "date": "2026-07-26",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N027",
+      "date": "2026-07-27",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N028",
+      "date": "2026-07-28",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N029",
+      "date": "2026-07-01",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N030",
+      "date": "2026-07-02",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N031",
+      "date": "2026-07-03",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N032",
+      "date": "2026-07-04",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N033",
+      "date": "2026-07-05",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N034",
+      "date": "2026-07-06",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N035",
+      "date": "2026-07-07",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N036",
+      "date": "2026-07-08",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N037",
+      "date": "2026-07-09",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    },
+    {
+      "note_id": "N038",
+      "date": "2026-07-10",
+      "service": "food support",
+      "outcome": "application submitted",
+      "exception": false
+    },
+    {
+      "note_id": "N039",
+      "date": "2026-07-11",
+      "service": "employment coaching",
+      "outcome": "follow-up requested",
+      "exception": false
+    },
+    {
+      "note_id": "N040",
+      "date": "2026-07-12",
+      "service": "housing referral",
+      "outcome": "appointment scheduled",
+      "exception": false
+    }
+  ]
+}

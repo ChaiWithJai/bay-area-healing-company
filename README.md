@@ -1,102 +1,109 @@
-# wm — workflow manager
+# Workflow Manager
 
-An open-source, command-line workflow manager for accountability workflows
-(grant cycles, case notes, board reporting, volunteer-hours reconciliation,
-and the entity-structuring work that makes the other four fundable). Shaped
-like HashiCorp Waypoint — cascading config, a provider/plugin boundary,
-`init` → `run` verbs — but standalone, MIT licensed, and built for a
-different job: running black-box workflows against whichever AI provider
-you plug in, cloud or local, and gating the result before you trust it.
+A local CLI for turning organizational records into verifiable deliverables. It demonstrates five workflows with installed small models, deterministic document tools, source evidence, and resource accounting.
 
-No runtime dependencies. Node 18+ only.
+The intended opportunity is practical: help organizations turn activity into reliable records and defensible decisions, while measuring the cost and limits of doing that work. Codex and Astra help develop and test the software through the developer's subscription. **The application never invokes Codex or a paid/cloud inference service.** This first build works on one laptop; multi-machine routing and PAIR are future work.
 
-## Install
+## Five workflows
+
+| Workflow | Deliverables |
+|---|---|
+| Volunteer/participation reconciliation | Reconciled hours ledger, funder totals, conflicts |
+| Case note normalization | Structured records for forty notes across three formats, exceptions |
+| Board reporting | PDF packet, variance table, risk-register changes |
+| Grant cycle management | DOCX narrative, XLSX budget, evidence crosswalk |
+| Stewardship structuring | Grounded comparison memo, asset inventory, draft fund-use policy, governance matrix |
+
+All outputs retain source evidence. Missing model work and unsupported gates prevent acceptance. A complete stewardship packet still requires human decisions; it performs no incorporation, asset transfer, or expenditure.
+
+## Setup
+
+Use Node.js 24 or newer, Python 3.12 or newer with `requirements.txt`, and local Tesseract and Poppler for scanned PDFs. An already installed model must be available through Ollama or LM Studio. The app never downloads a model.
 
 ```sh
-npm install -g .        # from a clone, or `npm link` for local dev
-wm help
+npm ci
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+export WM_PYTHON="$PWD/.venv/bin/python"
+node bin/wm.js init
+node bin/wm.js doctor
 ```
 
-## Quick start
+Within Codex, use its bundled Python interpreter returned by `load_workspace_dependencies` instead of creating a second environment when those libraries are available. Install Tesseract/Poppler using the operating system's package manager if absent. The checked-in raster fixture requires both for OCR.
+
+`wm init` creates `wm.config.json`. Edit profile model names to match locally installed artifacts. The initial profiles are `bonsai8` and `qwen7` through Ollama; the `bonsai27` LM Studio profile starts disabled. These are configuration candidates, not a capability ranking. `doctor` reads model inventory; `doctor --probe` consumes local inference for a tiny structured-output check.
 
 ```sh
-wm init                       # scaffolds wm.config.json, inputs/, output/
-wm workflow list               # the five bundled workflows
-wm provider list                # see which providers are configured / have keys
-
-# Cloud:
-export ANTHROPIC_API_KEY=sk-...
-wm provider test anthropic
-
-# Local (no API key, no data leaves your machine):
-ollama serve &
-ollama pull llama3.1
-wm provider test ollama
-
-# Put source files for a workflow under inputs/<short-id>/, then:
-wm workflow run stewardship_structuring --provider ollama
-wm workflow run grant_cycle_package --provider anthropic
+node bin/wm.js doctor --probe --provider bonsai8
+node bin/wm.js provider list
+node bin/wm.js task list
+node bin/wm.js task run volunteer_hours_reconciliation-01 --provider bonsai8
 ```
 
-Each run writes deliverables under `output/<short-id>/`, logs the full raw
-model output alongside them for audit, and prints which structural gates
-passed. See `docs/ARCHITECTURE.md` for what a "gate" means here and why the
-domain-specific gates in each spec are left for you to encode rather than
-auto-implemented.
+The CLI is also exposed as `wm` when installed through npm. Environment variables are documented in `.env.example`; the application does not automatically load that file. Configuration precedence is defaults, `~/.wm/config.json`, project `wm.config.json`, then supported environment overrides.
 
-## Configuration
+## Run and inspect
 
-`wm.config.json` in your project (or `~/.wm/config.json` for machine-wide
-defaults) overrides the built-in defaults; closest file wins, environment
-variables win over both:
+The `01` tasks are ordinary demonstration fixtures:
 
-```json
-{
-  "defaultProvider": "ollama",
-  "providers": {
-    "anthropic": { "model": "claude-sonnet-5" },
-    "openai": { "model": "gpt-4o-mini" },
-    "ollama": { "model": "llama3.1", "baseUrl": "http://127.0.0.1:11434" }
-  },
-  "workflowsDir": "./workflows",
-  "outputDir": "./output"
-}
+```sh
+node bin/wm.js task run case_note_normalization-01
+node bin/wm.js task run board_report_synthesis-01
+node bin/wm.js task run grant_cycle_package-01
+node bin/wm.js task run stewardship_structuring-01
 ```
 
-| Env var | Effect |
-|---|---|
-| `ANTHROPIC_API_KEY` | enables the `anthropic` provider |
-| `OPENAI_API_KEY` | enables the `openai` provider |
-| `OLLAMA_HOST` | overrides the local `ollama` base URL |
-| `WM_DEFAULT_PROVIDER` | overrides `defaultProvider` |
+For your own records, follow the input contracts in [the task catalog](docs/TASK-CATALOG.md):
 
-## The five workflows
+```sh
+node bin/wm.js workflow show nonprofit/grant_cycle_package
+node bin/wm.js workflow run nonprofit/grant_cycle_package --input-dir ./inputs/grant
+```
 
-| id | what it does |
-|---|---|
-| `nonprofit/grant_cycle_package` | RFP + 990 + budget + prior report → application package + compliance crosswalk |
-| `nonprofit/case_note_normalization` | free-text intake notes → normalized records + exceptions needing human review |
-| `nonprofit/board_report_synthesis` | quarterly metrics + financials → board packet, variance table, risk-register diff |
-| `nonprofit/volunteer_hours_reconciliation` | sign-ins + scheduler export + self-reported hours → reconciled ledger + funder rollup |
-| `nonprofit/stewardship_structuring` | assets + contributors + funding intent → fiscal-sponsorship-vs-501(c)(3) memo, IP transfer inventory, fund-use policy, governance matrix |
+Each run prints its ID and artifact directory. Substitute that actual ID below:
 
-`stewardship_structuring` is the fifth workflow — the Hashimoto/Ghostty
-pattern of converting a project into an entity that can legally receive
-restricted, tax-deductible money. It's the one that unlocks the other four;
-see `docs/ARCHITECTURE.md` for why it's sequenced first when no entity
-exists yet.
+```sh
+node bin/wm.js run list
+node bin/wm.js run status RUN_ID
+node bin/wm.js trace RUN_ID
+node bin/wm.js usage --run-id RUN_ID
+node bin/wm.js report export RUN_ID --output-dir ./reports/example
+node bin/wm.js run cancel RUN_ID
+node bin/wm.js run resume RUN_ID
+```
 
-`wm workflow show <id>` prints the full spec (inputs, deliverables, gates,
-scoring rubric, and the ALE-derived rationale for why agents tend to fail
-each one today).
+Runs use isolated artifact generations and SQLite checkpoints. Resume rejects changed inputs or work plans and does not reuse stale output files. A failed workflow exits with code 2; review-required output is reported explicitly. Inspect exception counts and gate details alongside the status.
 
-## Extending
+## Choose smaller models using evidence
 
-Add a workflow by dropping a JSON spec into `workflows/` (or point
-`workflowsDir` at your own directory). Add a provider by adding an adapter
-function in `src/providers/index.js` — the CLI and runner need no changes
-either way. Full details in `docs/ARCHITECTURE.md`.
+Calculations, joins, duplicate detection and document rendering run in code. Models extract or select bounded evidence. The router uses configured task-family profiles, permits one targeted repair, then can try a configured alternative local profile. One coordinator inference slot prevents overlapping requests from this application. Larger models are eligible only when explicitly configured and enabled.
 
-## License
+Use fixed-profile examinations to compare installed models. Evaluations disable fallback so a larger alternative cannot quietly receive credit for a smaller profile's result:
 
-MIT.
+```sh
+node bin/wm.js eval run --provider bonsai8 --split development --task volunteer_hours_reconciliation --repetitions 1 --max-runs 1
+node bin/wm.js eval resume CAMPAIGN_ID --max-runs 2
+node bin/wm.js eval report CAMPAIGN_ID
+node bin/wm.js eval run --provider qwen7 --split heldout --repetitions 3 --max-runs 1
+node bin/wm.js eval run --provider routed --split heldout --repetitions 3 --max-runs 1
+```
+
+Campaigns retain exact task/profile/repetition slots and finish in bounded batches. Configuration, source-code and catalog changes require a new campaign. Finished failed attempts remain in the result. References load only after the run terminates; they are never included in execution inputs. Use `--provider routed` to measure the configured family routing and fallback policy as a complete system. Only promote routing changes using development evidence, then evaluate separately on held-out tasks.
+
+## Evidence and limits
+
+The thirty scenarios are **synthetic and `generated_unreviewed`**. Their design follows [Agents' Last Exam's](https://agents-last-exam.org/docs/ale/index.html) focus on deliverables, independent references and execution traces, but they are not official ALE tasks or expert qualification results. Held-out cases are close perturbations. They do not establish production reliability or performance on unfamiliar organizations.
+
+The supported schemas are deliberately bounded. RFP requirements need explicit IDs. Financial and hours tables need documented columns. Case PII validation covers defined fields and patterns, not every possible identifier. Stewardship relies on supplied dated assumptions, not live legal research. Unsupported formats, schemas and policy values must be handled as exceptions or blocked work rather than guessed away.
+
+[Accounting documentation](docs/ACCOUNTING.md) explains tokens, timings, sampled resources, failed attempts, and missing measurements. Public exports exclude raw case content by default. Local traces still contain inputs and model responses. Development subscription consumption and application operating consumption remain separate. Electricity, hardware, labor and savings require additional measurement; no ROI or production-readiness claim follows from these demos.
+
+```sh
+npm test
+```
+
+Tests use controlled model responses and real document/OCR tooling. They verify implementation behavior without a paid service or running model. Actual model execution is a separate experiment. See [architecture](docs/ARCHITECTURE.md) and [task catalog](docs/TASK-CATALOG.md) for the contracts and limitations.
+
+## Future fleet
+
+The GB10 and 48 GB Mac can later host additional model profiles and PAIR can distribute local inference. Current endpoint validation intentionally permits only this machine's HTTP loopback addresses. Fleet networking requires an explicit implementation change, qualification and fresh resource measurements. Qwen3.8 or any larger model remains an experiment until tested on the same deliverables.
