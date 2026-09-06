@@ -170,3 +170,14 @@ test('cancelled streaming request records partial output and unknown usage',asyn
     return true;
   });
 });
+
+test('source-validation failure gets one repair then a bounded local alternative with full accounting',async t=>{
+ const args=await setup(t);args.config.routing={families:{},alternatives:['qwen7'],maxRepairs:1};
+ const calls=[];
+ const providerFactory=(_config,name)=>({generate:async()=>{calls.push(name);return {text:JSON.stringify(name==='qwen7'?answer:{quote:'Invented claim.',reason:'Unsupported'}),metrics:{inputTokens:10,outputTokens:5}};}});
+ const result=await runWorkflow({...args,providerFactory});assert.equal(result.passed,true);
+ assert.deepEqual(calls,['bonsai8','bonsai8','qwen7']);
+ const store=new RunStore(args.config.stateDir);
+ try {const finished=store.events(result.runId).filter(e=>e.type==='model.request.finished');assert.deepEqual(finished.map(e=>e.data.success),[false,false,true]);assert.equal(finished.reduce((n,e)=>n+e.data.inputTokens,0),30);assert.equal(store.getSteps(result.runId)[0].profile,'qwen7');}
+ finally{store.close();}
+});

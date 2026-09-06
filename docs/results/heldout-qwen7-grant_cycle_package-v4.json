@@ -1,0 +1,3849 @@
+{
+  "schemaVersion": 1,
+  "id": "heldout-qwen7-grant_cycle_package-v4",
+  "createdAt": "2026-09-06T16:22:41.906Z",
+  "updatedAt": "2026-09-06T16:24:41.946Z",
+  "status": "completed",
+  "sourceCodeDigest": "4bee524f2330fe162a6524b053ab6b38e4add84063b351c188d4e3eb098dc44b",
+  "rubricVersion": "2.2.0",
+  "configDigest": "8a3169f15d2d188cd67a4bcb34d0f805c6695995e078063809e27df9756ee741",
+  "catalogDigest": "c8e3acbfb52be421b8ca04e87d575117b4432f8c9ab5c1a43525c44a51794c77",
+  "split": "heldout",
+  "provider": "qwen7",
+  "repetitions": 3,
+  "summary": {
+    "total": 9,
+    "finished": 9,
+    "pending": 0,
+    "referencePasses": 9,
+    "completedDeliverables": 3,
+    "correctReviewOrAbstention": 6,
+    "failed": 0,
+    "reviewStatus": "generated_unreviewed",
+    "accounting": {
+      "inferenceAttempts": 30,
+      "runsWithAccounting": 9,
+      "knownInferenceDurationMs": 113946.08537500002,
+      "knownInputTokens": 5799,
+      "knownOutputTokens": 4329,
+      "denominator": "completedDeliverables counts independently reference-graded deliverables; resource sums include failed runs and repairs. Unknown metrics remain unavailable."
+    }
+  },
+  "limitations": [
+    "Synthetic generated fixtures; no human expert qualification",
+    "Stewardship heldout inputs duplicate development: repeatability only",
+    "Resource samples include host interference and are not energy or billing measurements"
+  ],
+  "slots": [
+    {
+      "key": "grant_cycle_package-04:qwen7:1",
+      "taskId": "grant_cycle_package-04",
+      "profile": "qwen7",
+      "repetition": 1,
+      "runId": "98fee47b-b34b-4a0c-9e00-cfa4b8c1b723",
+      "status": "finished",
+      "referenceDigest": "426245b8fe568da222cc34153779d179433a4a3d187179b3b1a9c200b3e0cb0e",
+      "result": {
+        "status": "completed",
+        "reviewRequired": false
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "all_requirements_supported",
+            "pass": true,
+            "detail": "Normal case cannot pass with exception-only evidence"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": true,
+        "correctReviewOrAbstention": false,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 1,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "completed": 1
+        },
+        "attempts": 3,
+        "successful": 3,
+        "failed": 0,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 587,
+          "output": 119
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 587,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 119,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 174,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 4063.181915999856,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 1349.590792000061,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 2.7005,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "prefillMs": {
+            "sum": 1326.8,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "decodeMs": {
+            "sum": 2713.249,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 174,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 4063.181915999856,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 1349.590792000061,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.7005,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 1326.8,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2713.249,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 174,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 4063.181915999856,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 1349.590792000061,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.7005,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 1326.8,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2713.249,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 174,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 4063.181915999856,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 1349.590792000061,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.7005,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 1326.8,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2713.249,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": 3,
+          "knownInferenceDurationMs": 4063.181915999856
+        },
+        "resources": {
+          "sampleCount": 6,
+          "coordinatorSampledPeakRssBytes": 133398528,
+          "serverSampledPeakRssBytes": 4938596352,
+          "serverSampledPeakCpuPercent": 142.60000000000002,
+          "serverInventoryKnownSamples": 6,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 6
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-04:qwen7:2",
+      "taskId": "grant_cycle_package-04",
+      "profile": "qwen7",
+      "repetition": 2,
+      "runId": "ed91fc57-f742-4bee-8c95-d43c35169fcb",
+      "status": "finished",
+      "referenceDigest": "426245b8fe568da222cc34153779d179433a4a3d187179b3b1a9c200b3e0cb0e",
+      "result": {
+        "status": "completed",
+        "reviewRequired": false
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "all_requirements_supported",
+            "pass": true,
+            "detail": "Normal case cannot pass with exception-only evidence"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": true,
+        "correctReviewOrAbstention": false,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 1,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "completed": 1
+        },
+        "attempts": 3,
+        "successful": 3,
+        "failed": 0,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 587,
+          "output": 119
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 587,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 119,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 584,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 2926.9028340002988,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 110.11050200043246,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 2.3334170000000003,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "prefillMs": {
+            "sum": 86.421,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "decodeMs": {
+            "sum": 2818.034,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2926.9028340002988,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 110.11050200043246,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.3334170000000003,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 86.421,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2818.034,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2926.9028340002988,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 110.11050200043246,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.3334170000000003,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 86.421,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2818.034,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2926.9028340002988,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 110.11050200043246,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.3334170000000003,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 86.421,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2818.034,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": 3,
+          "knownInferenceDurationMs": 2926.9028340002988
+        },
+        "resources": {
+          "sampleCount": 5,
+          "coordinatorSampledPeakRssBytes": 132644864,
+          "serverSampledPeakRssBytes": 4952162304,
+          "serverSampledPeakCpuPercent": 168.9,
+          "serverInventoryKnownSamples": 5,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 5
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-04:qwen7:3",
+      "taskId": "grant_cycle_package-04",
+      "profile": "qwen7",
+      "repetition": 3,
+      "runId": "1c165ce4-eff6-485e-9e5b-632f060edd04",
+      "status": "finished",
+      "referenceDigest": "426245b8fe568da222cc34153779d179433a4a3d187179b3b1a9c200b3e0cb0e",
+      "result": {
+        "status": "completed",
+        "reviewRequired": false
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "all_requirements_supported",
+            "pass": true,
+            "detail": "Normal case cannot pass with exception-only evidence"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": true,
+        "correctReviewOrAbstention": false,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 1,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "completed": 1
+        },
+        "attempts": 3,
+        "successful": 3,
+        "failed": 0,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 587,
+          "output": 119
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 587,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 119,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 584,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 2988.0693749999627,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 107.07750099990517,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 2.338126,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "prefillMs": {
+            "sum": 86.864,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "decodeMs": {
+            "sum": 2881.985,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2988.0693749999627,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 107.07750099990517,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.338126,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 86.864,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2881.985,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2988.0693749999627,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 107.07750099990517,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.338126,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 86.864,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2881.985,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2988.0693749999627,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 107.07750099990517,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.338126,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 86.864,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2881.985,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": 3,
+          "knownInferenceDurationMs": 2988.0693749999627
+        },
+        "resources": {
+          "sampleCount": 5,
+          "coordinatorSampledPeakRssBytes": 139476992,
+          "serverSampledPeakRssBytes": 4938170368,
+          "serverSampledPeakCpuPercent": 168.8,
+          "serverInventoryKnownSamples": 5,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 5
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-05:qwen7:1",
+      "taskId": "grant_cycle_package-05",
+      "profile": "qwen7",
+      "repetition": 1,
+      "runId": "8507fa03-29c2-4479-970e-718b6900a6bb",
+      "status": "finished",
+      "referenceDigest": "1a8c954203c0009f328a3e49971699fd0fdcfd0a4adc2b920d6811205d4a3f2c",
+      "result": {
+        "status": "blocked",
+        "reviewRequired": true
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "restriction_violation_flagged",
+            "pass": true,
+            "detail": "Known prohibited allocation is preserved and flagged"
+          },
+          {
+            "id": "review_handoff_present",
+            "pass": true,
+            "detail": "Expected issue must produce a visible review handoff"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": false,
+        "correctReviewOrAbstention": true,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 0,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "blocked": 1
+        },
+        "attempts": 3,
+        "successful": 3,
+        "failed": 0,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 587,
+          "output": 119
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 587,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 119,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 584,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 2975.380708000157,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 110.36070899991319,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 2.6633329999999997,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "prefillMs": {
+            "sum": 87.904,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "decodeMs": {
+            "sum": 2868.359,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2975.380708000157,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 110.36070899991319,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.6633329999999997,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 87.904,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2868.359,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2975.380708000157,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 110.36070899991319,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.6633329999999997,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 87.904,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2868.359,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2975.380708000157,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 110.36070899991319,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.6633329999999997,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 87.904,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2868.359,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": null,
+          "knownInferenceDurationMs": null
+        },
+        "resources": {
+          "sampleCount": 5,
+          "coordinatorSampledPeakRssBytes": 148602880,
+          "serverSampledPeakRssBytes": 4937891840,
+          "serverSampledPeakCpuPercent": 171.1,
+          "serverInventoryKnownSamples": 5,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 5
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-05:qwen7:2",
+      "taskId": "grant_cycle_package-05",
+      "profile": "qwen7",
+      "repetition": 2,
+      "runId": "dd7a2716-0ddb-41fd-8c75-b0ba5dffadbb",
+      "status": "finished",
+      "referenceDigest": "1a8c954203c0009f328a3e49971699fd0fdcfd0a4adc2b920d6811205d4a3f2c",
+      "result": {
+        "status": "blocked",
+        "reviewRequired": true
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "restriction_violation_flagged",
+            "pass": true,
+            "detail": "Known prohibited allocation is preserved and flagged"
+          },
+          {
+            "id": "review_handoff_present",
+            "pass": true,
+            "detail": "Expected issue must produce a visible review handoff"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": false,
+        "correctReviewOrAbstention": true,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 0,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "blocked": 1
+        },
+        "attempts": 3,
+        "successful": 3,
+        "failed": 0,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 587,
+          "output": 119
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 587,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 119,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 584,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 2946.521417000098,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 112.79074899991974,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 2.4480009999999996,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "prefillMs": {
+            "sum": 93.14,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "decodeMs": {
+            "sum": 2834.8729999999996,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2946.521417000098,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 112.79074899991974,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.4480009999999996,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 93.14,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2834.8729999999996,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2946.521417000098,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 112.79074899991974,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.4480009999999996,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 93.14,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2834.8729999999996,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2946.521417000098,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 112.79074899991974,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.4480009999999996,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 93.14,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2834.8729999999996,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": null,
+          "knownInferenceDurationMs": null
+        },
+        "resources": {
+          "sampleCount": 5,
+          "coordinatorSampledPeakRssBytes": 148602880,
+          "serverSampledPeakRssBytes": 4937826304,
+          "serverSampledPeakCpuPercent": 173.3,
+          "serverInventoryKnownSamples": 5,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 5
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-05:qwen7:3",
+      "taskId": "grant_cycle_package-05",
+      "profile": "qwen7",
+      "repetition": 3,
+      "runId": "8cbc0eac-53cb-4ebd-b5eb-5e655d30aec3",
+      "status": "finished",
+      "referenceDigest": "1a8c954203c0009f328a3e49971699fd0fdcfd0a4adc2b920d6811205d4a3f2c",
+      "result": {
+        "status": "blocked",
+        "reviewRequired": true
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "restriction_violation_flagged",
+            "pass": true,
+            "detail": "Known prohibited allocation is preserved and flagged"
+          },
+          {
+            "id": "review_handoff_present",
+            "pass": true,
+            "detail": "Expected issue must produce a visible review handoff"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": false,
+        "correctReviewOrAbstention": true,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 0,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "blocked": 1
+        },
+        "attempts": 3,
+        "successful": 3,
+        "failed": 0,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 587,
+          "output": 119
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 587,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 119,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 584,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 2979.852708999999,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 127.4058749997057,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 2.440417,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "prefillMs": {
+            "sum": 95.819,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          },
+          "decodeMs": {
+            "sum": 2865.025,
+            "known": 3,
+            "total": 3,
+            "coverage": 1
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2979.852708999999,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 127.4058749997057,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.440417,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 95.819,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2865.025,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2979.852708999999,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 127.4058749997057,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.440417,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 95.819,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2865.025,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 3,
+            "successful": 3,
+            "failed": 0,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 587,
+              "output": 119
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 587,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 119,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 584,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 2979.852708999999,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 127.4058749997057,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 2.440417,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "prefillMs": {
+                "sum": 95.819,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              },
+              "decodeMs": {
+                "sum": 2865.025,
+                "known": 3,
+                "total": 3,
+                "coverage": 1
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": null,
+          "knownInferenceDurationMs": null
+        },
+        "resources": {
+          "sampleCount": 5,
+          "coordinatorSampledPeakRssBytes": 148520960,
+          "serverSampledPeakRssBytes": 4934303744,
+          "serverSampledPeakCpuPercent": 179.20000000000002,
+          "serverInventoryKnownSamples": 5,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 5
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-06:qwen7:1",
+      "taskId": "grant_cycle_package-06",
+      "profile": "qwen7",
+      "repetition": 1,
+      "runId": "55ab7c72-d21a-4b32-bd2f-8b18babba9f4",
+      "status": "finished",
+      "referenceDigest": "6c1cce13897fddc5d78efbf16ff6b2fb545919393cce7fd203ef2a78649be8c0",
+      "result": {
+        "status": "blocked",
+        "reviewRequired": true
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "missing_evidence_flagged",
+            "pass": true,
+            "detail": "Missing evidence is explicit in the crosswalk"
+          },
+          {
+            "id": "review_handoff_present",
+            "pass": true,
+            "detail": "Expected issue must produce a visible review handoff"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": false,
+        "correctReviewOrAbstention": true,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 0,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "blocked": 1
+        },
+        "attempts": 4,
+        "successful": 2,
+        "failed": 2,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 759,
+          "output": 1205
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 759,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 1205,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 394,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "durationMs": {
+            "sum": 30871.853998000035,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 1015.2522079998162,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 3.4137090000000003,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "prefillMs": {
+            "sum": 700.02,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "decodeMs": {
+            "sum": 4642.026,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 394,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 30871.853998000035,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 1015.2522079998162,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.4137090000000003,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 700.02,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 4642.026,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 394,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 30871.853998000035,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 1015.2522079998162,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.4137090000000003,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 700.02,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 4642.026,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 394,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 30871.853998000035,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 1015.2522079998162,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.4137090000000003,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 700.02,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 4642.026,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": null,
+          "knownInferenceDurationMs": null
+        },
+        "resources": {
+          "sampleCount": 33,
+          "coordinatorSampledPeakRssBytes": 152109056,
+          "serverSampledPeakRssBytes": 5027463168,
+          "serverSampledPeakCpuPercent": 283.2,
+          "serverInventoryKnownSamples": 33,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 33
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-06:qwen7:2",
+      "taskId": "grant_cycle_package-06",
+      "profile": "qwen7",
+      "repetition": 2,
+      "runId": "6b382ec0-5af8-4add-9a86-d022ab13a743",
+      "status": "finished",
+      "referenceDigest": "6c1cce13897fddc5d78efbf16ff6b2fb545919393cce7fd203ef2a78649be8c0",
+      "result": {
+        "status": "blocked",
+        "reviewRequired": true
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "missing_evidence_flagged",
+            "pass": true,
+            "detail": "Missing evidence is explicit in the crosswalk"
+          },
+          {
+            "id": "review_handoff_present",
+            "pass": true,
+            "detail": "Expected issue must produce a visible review handoff"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": false,
+        "correctReviewOrAbstention": true,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 0,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "blocked": 1
+        },
+        "attempts": 4,
+        "successful": 2,
+        "failed": 2,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 759,
+          "output": 1205
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 759,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 1205,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 546,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "durationMs": {
+            "sum": 31678.56033300003,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 497.5082099996507,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 3.4539999999999997,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "prefillMs": {
+            "sum": 177.654,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "decodeMs": {
+            "sum": 4988.277,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 546,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 31678.56033300003,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 497.5082099996507,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.4539999999999997,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 177.654,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 4988.277,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 546,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 31678.56033300003,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 497.5082099996507,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.4539999999999997,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 177.654,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 4988.277,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 546,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 31678.56033300003,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 497.5082099996507,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.4539999999999997,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 177.654,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 4988.277,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": null,
+          "knownInferenceDurationMs": null
+        },
+        "resources": {
+          "sampleCount": 34,
+          "coordinatorSampledPeakRssBytes": 151257088,
+          "serverSampledPeakRssBytes": 5038342144,
+          "serverSampledPeakCpuPercent": 275,
+          "serverInventoryKnownSamples": 34,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 34
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    },
+    {
+      "key": "grant_cycle_package-06:qwen7:3",
+      "taskId": "grant_cycle_package-06",
+      "profile": "qwen7",
+      "repetition": 3,
+      "runId": "b05e88a7-8490-4ad0-862a-82ca12e33f42",
+      "status": "finished",
+      "referenceDigest": "6c1cce13897fddc5d78efbf16ff6b2fb545919393cce7fd203ef2a78649be8c0",
+      "result": {
+        "status": "blocked",
+        "reviewRequired": true
+      },
+      "grade": {
+        "passed": true,
+        "rubricVersion": "2.2.0",
+        "referenceScore": 1,
+        "checks": [
+          {
+            "id": "readable_artifacts",
+            "pass": true,
+            "detail": "[]"
+          },
+          {
+            "id": "model_evidence_present",
+            "pass": true,
+            "detail": "Accepted model evidence must be retained"
+          },
+          {
+            "id": "requirement_coverage",
+            "pass": true,
+            "detail": "Exactly the reference requirement IDs"
+          },
+          {
+            "id": "reference_budget_total",
+            "pass": true,
+            "detail": "Native budget total matches reference"
+          },
+          {
+            "id": "native_narrative",
+            "pass": true,
+            "detail": "Readable DOCX narrative"
+          },
+          {
+            "id": "missing_evidence_flagged",
+            "pass": true,
+            "detail": "Missing evidence is explicit in the crosswalk"
+          },
+          {
+            "id": "review_handoff_present",
+            "pass": true,
+            "detail": "Expected issue must produce a visible review handoff"
+          }
+        ],
+        "reviewStatus": "generated_unreviewed",
+        "fixtureType": "synthetic",
+        "completedDeliverable": false,
+        "correctReviewOrAbstention": true,
+        "claim": "Generated fixture reference agreement; not expert qualification"
+      },
+      "usage": {
+        "schemaVersion": 1,
+        "runCount": 1,
+        "acceptedRuns": 0,
+        "workflowRunCount": 1,
+        "qualification": {
+          "runCount": 0,
+          "attempts": 0,
+          "successful": 0,
+          "failed": 0,
+          "cancelled": 0,
+          "unknownOutcome": 0,
+          "incomplete": 0,
+          "tokensKnown": {
+            "input": null,
+            "output": null
+          },
+          "metrics": {
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "cachedTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "ttftMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "loadMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "prefillMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            },
+            "decodeMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null
+            }
+          }
+        },
+        "runtimePolicy": {
+          "localOnlySubstantiated": true,
+          "substantiatedRunCount": 1,
+          "evidence": "Saved validated local-only configuration and loopback provider profiles; not network capture or billing measurement",
+          "paidRuntimeApiConfigured": false
+        },
+        "runStatuses": {
+          "blocked": 1
+        },
+        "attempts": 4,
+        "successful": 2,
+        "failed": 2,
+        "cancelled": 0,
+        "unknownOutcome": 0,
+        "incomplete": 0,
+        "tokensKnown": {
+          "input": 759,
+          "output": 1205
+        },
+        "metrics": {
+          "inputTokens": {
+            "sum": 759,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 1205,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "cachedTokens": {
+            "sum": 546,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "durationMs": {
+            "sum": 32515.762084999587,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "ttftMs": {
+            "sum": 353.79483499983326,
+            "known": 4,
+            "total": 4,
+            "coverage": 1
+          },
+          "loadMs": {
+            "sum": 3.5609590000000004,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "prefillMs": {
+            "sum": 183.047,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          },
+          "decodeMs": {
+            "sum": 5078.474999999999,
+            "known": 3,
+            "total": 4,
+            "coverage": 0.75
+          }
+        },
+        "byModel": {
+          "qwen2.5:7b": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 546,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 32515.762084999587,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 353.79483499983326,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.5609590000000004,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 183.047,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 5078.474999999999,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "byProfile": {
+          "qwen7": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 546,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 32515.762084999587,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 353.79483499983326,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.5609590000000004,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 183.047,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 5078.474999999999,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "byWorkflow": {
+          "nonprofit/grant_cycle_package": {
+            "attempts": 4,
+            "successful": 2,
+            "failed": 2,
+            "cancelled": 0,
+            "unknownOutcome": 0,
+            "incomplete": 0,
+            "tokensKnown": {
+              "input": 759,
+              "output": 1205
+            },
+            "metrics": {
+              "inputTokens": {
+                "sum": 759,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 1205,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "cachedTokens": {
+                "sum": 546,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "durationMs": {
+                "sum": 32515.762084999587,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "ttftMs": {
+                "sum": 353.79483499983326,
+                "known": 4,
+                "total": 4,
+                "coverage": 1
+              },
+              "loadMs": {
+                "sum": 3.5609590000000004,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "prefillMs": {
+                "sum": 183.047,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              },
+              "decodeMs": {
+                "sum": 5078.474999999999,
+                "known": 3,
+                "total": 4,
+                "coverage": 0.75
+              }
+            }
+          }
+        },
+        "perAcceptedRun": {
+          "attempts": null,
+          "knownInferenceDurationMs": null
+        },
+        "resources": {
+          "sampleCount": 35,
+          "coordinatorSampledPeakRssBytes": 153583616,
+          "serverSampledPeakRssBytes": 5040734208,
+          "serverSampledPeakCpuPercent": 263.7,
+          "serverInventoryKnownSamples": 35,
+          "hostSampledPeakSwapUsedBytes": 5138945146.88,
+          "hostMemoryPressureCounts": {
+            "normal": 35
+          },
+          "acceleratorAllocationMeasured": false,
+          "sampledPeaksAreLowerBounds": true
+        },
+        "development": {
+          "eventCount": 0,
+          "attribution": "Separate from runtime; shared account usage cannot establish build-specific consumption."
+        },
+        "energyKwh": null,
+        "costs": {
+          "paidInferenceApiDollars": null,
+          "electricityDollars": null,
+          "hardwareAmortizationDollars": null,
+          "laborDollars": null
+        },
+        "caveats": [
+          "Missing metrics are unknown, not zero. Token sums include only reported counts; consult coverage. Started requests without a terminal event count once as incomplete with unknown outcome and metrics; these may be in flight or interrupted, not proven failures.",
+          "All workflow inference attempts, including failures and repairs, contribute to per-accepted-workflow accounting; qualification and development runs are excluded from that numerator and denominator.",
+          "Completed workflow deliverables without reviewRequired supply the accepted denominator; workflow validators must establish completion. Qualification successes are not delivered workflows.",
+          "Coordinator and known inference-server RSS are separate; server trees include helper overhead and may miss detached/reparented backends; RSS sums may double-count shared pages and exclude compressed or accelerator allocations. Accelerator allocation is not measured. Host metrics cover unrelated applications too. Server CPU is ps-reported and may be averaged over process lifetime.",
+          "No currency or energy values are inferred from token counts or subscription usage."
+        ]
+      }
+    }
+  ]
+}

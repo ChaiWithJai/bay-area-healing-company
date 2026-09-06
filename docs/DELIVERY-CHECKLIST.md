@@ -16,3 +16,9 @@ This laptop is the first worker and test environment. Codex/Astra architects, im
 | Reviewable delivery | Isolated branch and pull request; no merge |
 
 The initial fixture suite has no real beneficiary records. Historical deidentified data and independent domain-expert review require a later permissioned pilot. This limitation must accompany any demonstration or benchmark claim. Neither source-backed drafts nor successful synthetic tests establish legal, accounting or grant-review expertise.
+
+## Verified delivery
+
+All implementation milestones above are complete for the supported laptop contracts. The standalone environment passed 83 tests and a fresh real-model participation smoke run. The committed examples contain all five ordinary workflow outputs. Bonsai passed 45/45 held-out reference checks; Qwen passed 27/27 checks on its three development-qualified families; operational routing passed 15/15 and used four successful Qwen fallback responses.
+
+The [delivery manifest](results/delivery-manifest.json) links exact experiment versions and counts. The [benchmark](BENCHMARK.md) explains denominators, failures, timing, environment changes and limitations. A pull request carries the implementation without merging into main. Historical-data pilots, expert review and future fleet deployment remain explicitly outside this laptop demonstration.
