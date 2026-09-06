@@ -1,0 +1,15 @@
+{
+  "taskId": "stewardship_structuring-01",
+  "runId": "82aa6689-7e88-4d29-8aed-44877be4e908",
+  "sourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+  "rubricVersion": "2.2.0",
+  "profile": "bonsai8",
+  "referencePass": true,
+  "reviewRequired": true,
+  "fixtureType": "synthetic",
+  "sourceTask": "fixtures/tasks/stewardship_structuring-01/inputs",
+  "inferenceAttempts": 2,
+  "inferenceDurationMs": 3545.8289570000197,
+  "inputTokens": 456,
+  "outputTokens": 179
+}

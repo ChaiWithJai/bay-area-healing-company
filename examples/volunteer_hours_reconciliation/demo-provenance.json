@@ -1,0 +1,15 @@
+{
+  "taskId": "volunteer_hours_reconciliation-01",
+  "runId": "fccfcbec-6b46-4ec2-a8d1-1b5a99b9f301",
+  "sourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+  "rubricVersion": "2.2.0",
+  "profile": "bonsai8",
+  "referencePass": true,
+  "reviewRequired": false,
+  "fixtureType": "synthetic",
+  "sourceTask": "fixtures/tasks/volunteer_hours_reconciliation-01/inputs",
+  "inferenceAttempts": 1,
+  "inferenceDurationMs": 1468.186583,
+  "inputTokens": 115,
+  "outputTokens": 107
+}

@@ -1,0 +1,15 @@
+{
+  "taskId": "board_report_synthesis-01",
+  "runId": "78dfdea3-ac1a-49ad-a12d-fc478fe219e2",
+  "sourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+  "rubricVersion": "2.2.0",
+  "profile": "bonsai8",
+  "referencePass": true,
+  "reviewRequired": false,
+  "fixtureType": "synthetic",
+  "sourceTask": "fixtures/tasks/board_report_synthesis-01/inputs",
+  "inferenceAttempts": 4,
+  "inferenceDurationMs": 4648.395458000043,
+  "inputTokens": 668,
+  "outputTokens": 225
+}

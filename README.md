@@ -88,6 +88,8 @@ node bin/wm.js eval run --provider qwen7 --split heldout --repetitions 3 --max-r
 node bin/wm.js eval run --provider routed --split heldout --repetitions 3 --max-runs 1
 ```
 
+Compare completed development campaigns with `node scripts/routing-report.mjs CAMPAIGN_A CAMPAIGN_B`. The report proposes the fastest fully timed profile that passes all three scenario types, and leaves unsupported families for review. It rejects held-out selection and mismatched code/configuration/rubric versions, and never applies configuration changes.
+
 Campaigns retain exact task/profile/repetition slots and finish in bounded batches. Configuration, source-code and catalog changes require a new campaign. Finished failed attempts remain in the result. References load only after the run terminates; they are never included in execution inputs. Use `--provider routed` to measure the configured family routing and fallback policy as a complete system. Only promote routing changes using development evidence, then evaluate separately on held-out tasks.
 
 ## Evidence and limits
@@ -107,3 +109,7 @@ Tests use controlled model responses and real document/OCR tooling. They verify 
 ## Future fleet
 
 The GB10 and 48 GB Mac can later host additional model profiles and PAIR can distribute local inference. Current endpoint validation intentionally permits only this machine's HTTP loopback addresses. Fleet networking requires an explicit implementation change, qualification and fresh resource measurements. Qwen3.8 or any larger model remains an experiment until tested on the same deliverables.
+
+## Measured demonstration
+
+See the [five actual local demo packets](examples/README.md), [laptop measurements](docs/BENCHMARK.md), and [market experiment plan](docs/MARKET-EXPERIMENT.md). The demonstration uses explicitly synthetic data.
