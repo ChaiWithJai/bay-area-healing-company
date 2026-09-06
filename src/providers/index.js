@@ -18,6 +18,14 @@ async function localFetch(url, options = {}) {
   return r;
 }
 export function listProviderNames(c) { return Object.keys(c.providers); }
+export function checkPromptBudget(profile,{system,prompt,schema,maxTokens}) {
+  // UTF-8 bytes conservatively bound content tokens for the supported local
+  // tokenizers. Reserve a further 1024 tokens for chat/template overhead.
+  const bytes=Buffer.byteLength(system)+Buffer.byteLength(prompt)+Buffer.byteLength(JSON.stringify(schema??{}));
+  const output=maxTokens??profile.maxTokens;
+  if(!Number.isInteger(output)||output<1||bytes+output+1024>profile.context)throw new Error('Request exceeds conservative context budget; split the source or qualify a larger context. No request dispatched.');
+  return {contentBytes:bytes,outputTokens:output,templateReserveTokens:1024};
+}
 export function getProvider(c, name = c.defaultProvider) {
   const p = c.providers[name]; validateProfile(p);
   const base = assertLocalEndpoint(p.baseUrl); let fingerprint;
@@ -42,6 +50,7 @@ export function getProvider(c, name = c.defaultProvider) {
       return fingerprint;
     },
     async generate({system,prompt,schema,signal,maxTokens,onToken}) {
+      checkPromptBudget(p,{system,prompt,schema,maxTokens});
       const identity=await this.describe(), started=performance.now();
       let text='',ttftMs=null,final={},finishReason=null;
       const ctl=new AbortController(),timer=setTimeout(()=>ctl.abort(new Error('Inference timeout')),c.limits.requestTimeoutMs);

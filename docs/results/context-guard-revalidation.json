@@ -1,0 +1,21 @@
+{
+  "newSourceCodeDigest": "4bee524f2330fe162a6524b053ab6b38e4add84063b351c188d4e3eb098dc44b",
+  "at": "2026-09-06T16:00:20.463Z",
+  "method": "Read-only revalidation of retained request prompts against conservative byte context guard. No model calls. Truncated requests without retained response traces excluded; final complete campaign counts reported separately.",
+  "reports": [
+    {
+      "campaignId": "dev-bonsai8-v4",
+      "originalSourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+      "recordedCompleteResponsePromptsChecked": 154,
+      "maxContentBytes": 1337,
+      "failures": []
+    },
+    {
+      "campaignId": "dev-qwen7-v4",
+      "originalSourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+      "recordedCompleteResponsePromptsChecked": 143,
+      "maxContentBytes": 1337,
+      "failures": []
+    }
+  ]
+}
