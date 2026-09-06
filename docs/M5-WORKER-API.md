@@ -4,6 +4,11 @@ The worker service evolved during qualification. Its manifest still reports `loc
 
 | Method | Route | Observed behavior |
 | --- | --- | --- |
+| GET | `/.well-known/agent.json` | Agent identity, endpoints and capabilities; tested with HTTP 200 |
+| GET | `/api/a2a/hello` | Protocol greeting and next steps; tested with HTTP 200 |
+| GET | `/api/context` | Machine telemetry, adapter and planning context; tested with HTTP 200 |
+| GET | `/api/metrics` | Telemetry snapshot; tested with HTTP 200 |
+| GET | `/api/health` | Service health; tested with HTTP 200 |
 | GET | `/api/capacity` | Typed memory pressure, adapter readiness, reservation counts, queue depth and admission decision; tested with HTTP 200 |
 | POST | `/api/jobs` | Validates a job, reserves adapter capacity and starts asynchronous execution; an empty request was tested and rejected with HTTP 400 |
 | GET | `/api/jobs` | Source implements listing recent jobs; unrelated job content was not fetched |

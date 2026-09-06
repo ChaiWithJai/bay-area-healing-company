@@ -16,7 +16,7 @@ The immediate evidence favors the small model for these development cards while 
 | --- | --- | --- |
 | M4 coordinator | Prepare sources, validate evidence, render artifacts, retain traces and accounting | Graceful recovery verified; hard failures remain quarantined until explicit clearance |
 | M4 Bonsai 8B | Bounded extraction and evidence selection; development default candidate | 45/45 final routed references verified across three repetitions |
-| M5 Qwen3.8 27B MLX | Qualified for development workflows over SSH; larger local alternative | Capacity-aware concurrency verified with remote Qwen 7B; 27B held-out comparison underway |
+| M5 Qwen3.8 27B MLX | Qualified for development workflows over SSH; larger local alternative | Capacity-aware concurrency verified with remote Qwen 7B; 27B first-pass references 43/45 across three repetitions; two telemetry deferrals recovered |
 | Dell GB10 | Later larger or higher-precision model host | Authenticated inventory, runtime/artifact qualification, workload and resource measurements |
 | Astra through Codex | Software architecture, implementation, debugging, testing, and review | Concrete development artifacts and tests; no application inference role |
 | Human owner | Resolve source ambiguity and consequential decisions; review references and value | Recorded review and observed human-time baseline |
@@ -48,8 +48,8 @@ A pilot should preserve the SSH transport for comparison, use actual PAIR-displa
 Remaining qualification work:
 
 1. Routed repeatability is complete at 45/45; preserve its failures, repairs, 12 larger-model fallback responses and review outcomes.
-2. Test the larger M5 model on held-out cards under current capacity controls. Keep development-only qualification distinct from this result.
-3. Qualify the GB10 when prepared, then pilot PAIR without changing workflow or grading contracts.
+2. Larger-model testing is complete at 43/45 first-pass references, with two capacity deferrals recovered separately. Keep operating availability and model-output validation distinct.
+3. Qualify the GB10 when prepared, including Linux-native memory/GPU admission telemetry: the current pressure contract is macOS-specific. Then pilot PAIR without changing workflow or grading contracts.
 4. Obtain independently reviewed, permissioned operational data and human-time baselines before production or savings claims.
 
 The current software uses one coordinator and two local inference workers. It does not claim pooled memory, a tested PAIR deployment, or independently autonomous coordinators.
