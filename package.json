@@ -1,0 +1,23 @@
+{
+  "name": "workflow-manager",
+  "version": "0.1.0",
+  "description": "Open-source, Waypoint-style workflow manager: define black-box workflows (inflow -> gate -> score -> deliverable), plug in cloud or local AI providers, and run them from the command line.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "wm": "./bin/wm.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "workflows",
+    "README.md",
+    "LICENSE"
+  ]
+}

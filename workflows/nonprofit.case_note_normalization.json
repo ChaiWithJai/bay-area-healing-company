@@ -1,0 +1,17 @@
+{
+  "id": "nonprofit/case_note_normalization",
+  "name": "Case notes",
+  "ale_nearest": [],
+  "task": "Given 40 free-text encounter notes across three intake formats and a target schema, emit normalized structured records plus a flagged-exception file for anything requiring human review.",
+  "inputs": ["notes_raw/*.txt", "target_schema.json", "pii_policy.json"],
+  "deliverable": ["output/normalized_cases.tsv", "output/exceptions.tsv"],
+  "eval_mode": "structured_tabular",
+  "gates": [
+    "zero PII fields present that pii_policy marks prohibited",
+    "every input note maps to exactly one output row or one exception row",
+    "no fabricated field values (every populated field traceable to source span)"
+  ],
+  "score": "field-level F1 vs expert reference, with hallucinated fields scored negative",
+  "why_agents_fail_today": "Zero ALE coverage. Nothing in a 55-subdomain sweep of 1,016 O*NET occupations anchors beneficiary case documentation.",
+  "economic_value": "Highest-volume lowest-leverage writing task in direct service; audit and liability exposure. No dedicated market sizing exists — folds into the $8B global nonprofit software category."
+}

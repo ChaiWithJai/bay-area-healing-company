@@ -1,0 +1,16 @@
+{
+  "id": "nonprofit/volunteer_hours_reconciliation",
+  "name": "Volunteer hours",
+  "ale_nearest": ["business/hr_project_management (5 instances)"],
+  "task": "Given scanned paper sign-ins, a scheduling export, and a spreadsheet of self-reported hours, produce a reconciled hours ledger and a funder-metric rollup.",
+  "inputs": ["signins_scanned/*.pdf", "scheduler_export.csv", "self_reported.xlsx", "funder_metric_defs.json"],
+  "deliverable": ["output/hours_ledger.tsv", "output/funder_rollup.tsv", "output/conflicts.tsv"],
+  "eval_mode": "structured_tabular",
+  "gates": [
+    "no double-counted volunteer-shift pair",
+    "every conflict between sources surfaced rather than silently resolved"
+  ],
+  "score": "exact match on rollup totals + recall on conflict detection",
+  "why_agents_fail_today": "Failure is ingestion/OCR and source-conflict handling, not reasoning. Most mechanically tractable of the five.",
+  "economic_value": "Coordinator time; feeds grant reporting since volunteer hours are frequently a required funder metric. Smallest dollar opportunity, fastest to working."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "nonprofit/board_report_synthesis",
+  "name": "Board reporting",
+  "ale_nearest": ["business/enterprise_analytics_planning (42 instances)"],
+  "task": "Given four quarters of program metrics, financials, and the prior board packet, produce a governance packet: narrative, variance table, and a risk register diff against last quarter.",
+  "inputs": ["metrics_q1_q4.csv", "financials.xlsx", "prior_packet.pdf", "board_charter.md"],
+  "deliverable": ["output/board_packet.pdf", "output/variance.tsv", "output/risk_register_diff.tsv"],
+  "eval_mode": "structured_tabular gate + free_text_rubric",
+  "gates": [
+    "every number in narrative traces to a cell in variance.tsv",
+    "no risk silently dropped from prior register without a stated resolution"
+  ],
+  "score": "0.5 * variance table exactness + 0.5 * rubric probes on narrative fidelity",
+  "why_agents_fail_today": "Depends on free-text/semantic scoring — the mode ALE explicitly avoids because judge models drift and 'does this look right' prompts can't discriminate near-correct from correct.",
+  "economic_value": "ED and development staff hours; fiduciary accuracy risk. Not separately sized; adjacent to CRM reporting inside the $8B category."
+}

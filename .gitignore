@@ -1,0 +1,6 @@
+node_modules/
+output/
+inputs/
+wm.config.json
+.env
+*.log
