@@ -2,7 +2,7 @@
 
 A local CLI for turning organizational records into verifiable deliverables. It demonstrates five workflows with installed small models, deterministic document tools, source evidence, and resource accounting.
 
-The intended opportunity is practical: help organizations turn activity into reliable records and defensible decisions, while measuring the cost and limits of doing that work. Codex and Astra help develop and test the software through the developer's subscription. **The application never invokes Codex or a paid/cloud inference service.** This first build works on one laptop; multi-machine routing and PAIR are future work.
+The intended opportunity is practical: help organizations turn activity into reliable records and defensible decisions, while measuring the cost and limits of doing that work. Codex and Astra help develop and test the software through the developer's subscription. **The application never invokes Codex or a paid/cloud inference service.** The build works on one laptop and now supports an authenticated two-Mac worker fleet. PAIR and the Dell GB10 remain separate qualification targets.
 
 ## Five workflows
 
@@ -76,7 +76,7 @@ Runs use isolated artifact generations and SQLite checkpoints. Resume rejects ch
 
 ## Choose smaller models using evidence
 
-Calculations, joins, duplicate detection and document rendering run in code. Models extract or select bounded evidence. The router uses configured task-family profiles, permits one targeted repair, then can try a configured alternative local profile. One coordinator inference slot prevents overlapping requests from this application. Larger models are eligible only when explicitly configured and enabled.
+Calculations, joins, duplicate detection and document rendering run in code. Models extract or select bounded evidence. The router uses configured task-family profiles, permits one targeted repair, then can try a configured alternative local profile. Coordinator-local SQLite leases permit one inference request per worker across cooperating processes sharing the same state directory; different workers can run concurrently. This is not distributed locking across coordinator hosts. Optional CPU/native-memory-pressure admission checks run before dispatch, and uncertain interrupted workers remain quarantined until an operator confirms they are idle. Larger models are eligible only when explicitly configured and enabled.
 
 Use fixed-profile examinations to compare installed models. Evaluations disable fallback so a larger alternative cannot quietly receive credit for a smaller profile's result:
 

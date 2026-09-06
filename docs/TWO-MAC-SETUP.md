@@ -1,6 +1,6 @@
 # Two-Mac setup and qualification
 
-Status as of 2026-09-06: authenticated access, worker inventory, structured probes, and real development workflows are verified on both physical machines. The coordinator is an M4 Pro with 24 GB; worker `mac48` is an M5 Pro with 48 GB. The M5 serves the installed Qwen3.8 27B MLX 4-bit artifact through LM Studio. A first held-out routing campaign passed 15/15 synthetic reference checks; final concurrency verification after the crash-quarantine guard is recorded below.
+Status as of 2026-09-06: authenticated access, worker inventory, structured probes, and real development workflows are verified on both physical machines. The coordinator is an M4 Pro with 24 GB; worker `mac48` is an M5 Pro with 48 GB. The M5 serves the installed Qwen3.8 27B MLX 4-bit artifact through LM Studio. The final held-out routing campaign passed 15/15 synthetic reference checks. Concurrent inference and graceful checkpoint recovery passed on the same source version; see [two-Mac results](TWO-MAC-RESULTS.md).
 
 ## Development evidence
 
@@ -81,7 +81,7 @@ The [monitor correction patch](monitor-telemetry-correction.patch) records the n
 
 Admission is opt-in through `config.admission.enabled === true`. The helper screens freshness, CPU utilization, and native pressure. Defaults require telemetry no older than 15 seconds, CPU at or below 85%, and native pressure level 1; missing, invalid, stale, warning, or critical evidence denies admission. It does not measure GPU capacity or reserve resources. With admission disabled, `wm fleet context` is informational and does not guard workflow dispatch.
 
-The runner checks admission **inside the worker lease, before a model request starts**. It waits within `maxWaitMs` (default 30000, maximum 300000), polling at `pollMs` (default 1000, maximum 60000); `maxAgeMs` defaults to 15000 with maximum 60000. `maxCpuPercent` is configurable from 0 to 100; `maxMemoryPressureLevel` defaults to 1 and cannot make warning/critical pressure admissible. A capacity timeout records the reason and tries a configured alternative on a different worker. It does not count as a model repair or repeatedly wait on the same denied host for that step. No healthy eligible worker yields a blocked run; cancellation remains cancellation; invalid policy is an error. Admission check/wait events are separate from inference tokens and timing. The full implementation suite passes 135 tests, including nine focused admission tests. Live fleet verification is recorded separately below.
+The runner checks admission **inside the worker lease, before a model request starts**. It waits within `maxWaitMs` (default 30000, maximum 300000), polling at `pollMs` (default 1000, maximum 60000); `maxAgeMs` defaults to 15000 with maximum 60000. `maxCpuPercent` is configurable from 0 to 100; `maxMemoryPressureLevel` defaults to 1 and cannot make warning/critical pressure admissible. A capacity timeout records the reason and tries a configured alternative on a different worker. It does not count as a model repair or repeatedly wait on the same denied host for that step. No healthy eligible worker yields a blocked run; cancellation remains cancellation; invalid policy is an error. Admission check/wait events are separate from inference tokens and timing. The full implementation suite passes 140 tests, including admission, worker quarantine, separate-process leases and recovery. Live fleet verification is recorded separately below.
 
 ## Coordinator-local worker leases
 
@@ -122,3 +122,15 @@ The command refuses clearance while a cooperating process owns a live worker lea
 The [first fleet held-out campaign](results/heldout-two-mac-routed-v1.json) passed 15/15 references with the development-selected Bonsai default. It retained 158 attempts, 26,791 input tokens and 9,829 output tokens, including repairs. This is a routed-system test, not a second independent model benchmark.
 
 The [recovery demonstration](results/two-mac-recovery-v1.json) cancelled the remote Qwen 7B case-note workflow after three settled, accepted requests, then resumed all 40 notes. The three original attempt IDs were preserved without duplicate requests. A deliberately absent remote model subsequently fell back to Bonsai and passed the participation reference. This establishes graceful checkpoint recovery and unavailable-model fallback; it does not simulate a backend process crash. Both reports retain their exact source digests from before the subsequent quarantine hardening.
+
+The final [held-out campaign](results/heldout-two-mac-routed-v2.json), [concurrency run](results/two-mac-concurrency-v2.json), and [recovery run](results/two-mac-recovery-v2.json) all use source digest `a6ac1ab666907cc507801bf5ecfd3bb5669ceb61439b1af873dee1e0e61a985e`, including quarantine protection. The final routed campaign passed 15/15 references; the concurrent grant runs both passed with 2,724 ms of successful request overlap. This is request concurrency evidence, not a GPU utilization measurement.
+
+### Larger-model residency
+
+Qwen 27B was unloaded by the runtime TTL after qualification. The configured alias must be loaded before it can serve as a fallback; the application does not silently allocate that model. On the worker, the observed load command was:
+
+```sh
+lms load qwen/qwen3.8-27b --context-length 4096 --parallel 1 --identifier wm-qwen38-27b-mlx --ttl 600 --yes
+```
+
+The runtime reported a loaded context of 119552 despite the requested 4096. The application retained its conservative 4096 input budget. Recheck native memory pressure after loading and run the accounted provider probe before relying on the alias. The first default-reasoning probe produced no usable JSON; the qualified profile uses `reasoningEffort: "none"`. A successful capacity check before loading does not guarantee sufficient headroom afterward.
