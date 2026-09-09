@@ -1,0 +1,32 @@
+[
+  {
+    "item_id": "R1",
+    "source_ids": [
+      "src-951ab1582aa3bda99202"
+    ],
+    "value": {
+      "quote": "The mission is to connect residents with practical community support.",
+      "reason": "This exact complete sentence directly states the mission as required by R1."
+    }
+  },
+  {
+    "item_id": "R2",
+    "source_ids": [
+      "src-951ab1582aa3bda99202"
+    ],
+    "value": {
+      "quote": "Annual participants served totaled 420.",
+      "reason": "The sentence directly states the number of annual participants served, which satisfies the requirement of reporting this figure."
+    }
+  },
+  {
+    "item_id": "R3",
+    "source_ids": [
+      "src-951ab1582aa3bda99202"
+    ],
+    "value": {
+      "quote": "The evaluation method uses reconciled attendance and participant surveys.",
+      "reason": "This sentence directly states the evaluation method as specified in the request."
+    }
+  }
+]

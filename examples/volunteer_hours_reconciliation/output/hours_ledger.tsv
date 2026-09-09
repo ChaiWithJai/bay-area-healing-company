@@ -1,0 +1,4 @@
+person_id	shift_id	hours	status	sources
+PERSON-A	SHIFT-A	2	accepted	scheduler;self_reported;src-5af0f53285bf0b531f21
+PERSON-B	SHIFT-B	3	accepted	scheduler;self_reported;src-5af0f53285bf0b531f21
+PERSON-C	SHIFT-C	4	accepted	scheduler;self_reported;src-5af0f53285bf0b531f21

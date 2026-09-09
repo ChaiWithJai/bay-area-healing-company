@@ -1,0 +1,1027 @@
+{
+  "schemaVersion": 1,
+  "mode": "descriptive-fleet-accounting",
+  "comparison": {
+    "status": "comparable-fixed-campaigns",
+    "reasons": [],
+    "recommendations": []
+  },
+  "campaigns": [
+    {
+      "campaign": "dev-two-mac-bonsai8-v1",
+      "runs": 15,
+      "referencePasses": 15,
+      "completedDeliverables": 7,
+      "correctReviewOrAbstention": 11,
+      "accounting": {
+        "attempts": 154,
+        "successful": 145,
+        "failed": 9,
+        "cancelled": 0,
+        "incomplete": 0,
+        "unknownOutcome": 0,
+        "runsWithAccounting": 15,
+        "runsMissingAccounting": 0,
+        "metrics": {
+          "inputTokens": {
+            "sum": 26791,
+            "known": 154,
+            "total": 154,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 9826,
+            "known": 154,
+            "total": 154,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 134258.74954499994,
+            "known": 154,
+            "total": 154,
+            "coverage": 1
+          }
+        }
+      },
+      "coordinatorResources": {
+        "scope": "coordinator host only",
+        "sampledPeakRssBytes": 148045824,
+        "sampledServerPeakRssBytes": 2656223232,
+        "sampledPeaksAreLowerBounds": true
+      },
+      "workflows": [
+        {
+          "profile": "bonsai8",
+          "workflow": "volunteer_hours_reconciliation",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 2,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 2,
+            "successful": 2,
+            "failed": 0,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 230,
+                "known": 2,
+                "total": 2,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 214,
+                "known": 2,
+                "total": 2,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 3835.4790830000006,
+                "known": 2,
+                "total": 2,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 100532224,
+            "sampledServerPeakRssBytes": 2186969088,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "coordinator",
+              "runsInvolvingWorker": 2,
+              "referencePassingRunsInvolvingWorker": 2,
+              "transport": [
+                "loopback"
+              ],
+              "accounting": {
+                "attempts": 2,
+                "successful": 2,
+                "failed": 0,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 2,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 230,
+                    "known": 2,
+                    "total": 2,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 214,
+                    "known": 2,
+                    "total": 2,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 3835.4790830000006,
+                    "known": 2,
+                    "total": 2,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 0,
+                "sampledServerPeakRssBytes": null,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "bonsai8",
+          "workflow": "case_note_normalization",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 1,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 121,
+            "successful": 120,
+            "failed": 1,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 20846,
+                "known": 121,
+                "total": 121,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 7827,
+                "known": 121,
+                "total": 121,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 106183.35020699992,
+                "known": 121,
+                "total": 121,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 121831424,
+            "sampledServerPeakRssBytes": 2227290112,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "coordinator",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "loopback"
+              ],
+              "accounting": {
+                "attempts": 121,
+                "successful": 120,
+                "failed": 1,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 20846,
+                    "known": 121,
+                    "total": 121,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 7827,
+                    "known": 121,
+                    "total": 121,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 106183.35020699992,
+                    "known": 121,
+                    "total": 121,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 0,
+                "sampledServerPeakRssBytes": null,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "bonsai8",
+          "workflow": "board_report_synthesis",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 1,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 14,
+            "successful": 10,
+            "failed": 4,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 2285,
+                "known": 14,
+                "total": 14,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 750,
+                "known": 14,
+                "total": 14,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 10064.085461000039,
+                "known": 14,
+                "total": 14,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 138477568,
+            "sampledServerPeakRssBytes": 2394210304,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "coordinator",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "loopback"
+              ],
+              "accounting": {
+                "attempts": 14,
+                "successful": 10,
+                "failed": 4,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 2285,
+                    "known": 14,
+                    "total": 14,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 750,
+                    "known": 14,
+                    "total": 14,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 10064.085461000039,
+                    "known": 14,
+                    "total": 14,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 0,
+                "sampledServerPeakRssBytes": null,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "bonsai8",
+          "workflow": "grant_cycle_package",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 1,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 10,
+            "successful": 8,
+            "failed": 2,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 1976,
+                "known": 10,
+                "total": 10,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 396,
+                "known": 10,
+                "total": 10,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 6353.699084000007,
+                "known": 10,
+                "total": 10,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 143802368,
+            "sampledServerPeakRssBytes": 2511601664,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "coordinator",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "loopback"
+              ],
+              "accounting": {
+                "attempts": 10,
+                "successful": 8,
+                "failed": 2,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 1976,
+                    "known": 10,
+                    "total": 10,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 396,
+                    "known": 10,
+                    "total": 10,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 6353.699084000007,
+                    "known": 10,
+                    "total": 10,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 0,
+                "sampledServerPeakRssBytes": null,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "bonsai8",
+          "workflow": "stewardship_structuring",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 2,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 7,
+            "successful": 5,
+            "failed": 2,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 1454,
+                "known": 7,
+                "total": 7,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 639,
+                "known": 7,
+                "total": 7,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 7822.135710000002,
+                "known": 7,
+                "total": 7,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 148045824,
+            "sampledServerPeakRssBytes": 2656223232,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "coordinator",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "loopback"
+              ],
+              "accounting": {
+                "attempts": 7,
+                "successful": 5,
+                "failed": 2,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 1454,
+                    "known": 7,
+                    "total": 7,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 639,
+                    "known": 7,
+                    "total": 7,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 7822.135710000002,
+                    "known": 7,
+                    "total": 7,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 0,
+                "sampledServerPeakRssBytes": null,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "campaign": "dev-mac48-qwen27-mlx-v1",
+      "runs": 15,
+      "referencePasses": 15,
+      "completedDeliverables": 7,
+      "correctReviewOrAbstention": 11,
+      "accounting": {
+        "attempts": 149,
+        "successful": 149,
+        "failed": 0,
+        "cancelled": 0,
+        "incomplete": 0,
+        "unknownOutcome": 0,
+        "runsWithAccounting": 15,
+        "runsMissingAccounting": 0,
+        "metrics": {
+          "inputTokens": {
+            "sum": 26091,
+            "known": 149,
+            "total": 149,
+            "coverage": 1
+          },
+          "outputTokens": {
+            "sum": 8528,
+            "known": 149,
+            "total": 149,
+            "coverage": 1
+          },
+          "durationMs": {
+            "sum": 881242.3254189997,
+            "known": 149,
+            "total": 149,
+            "coverage": 1
+          }
+        }
+      },
+      "coordinatorResources": {
+        "scope": "coordinator host only",
+        "sampledPeakRssBytes": 108494848,
+        "sampledServerPeakRssBytes": 205291520,
+        "sampledPeaksAreLowerBounds": true
+      },
+      "workflows": [
+        {
+          "profile": "mac48-qwen27-mlx",
+          "workflow": "volunteer_hours_reconciliation",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 2,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 2,
+            "successful": 2,
+            "failed": 0,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 230,
+                "known": 2,
+                "total": 2,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 208,
+                "known": 2,
+                "total": 2,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 19878.505041999997,
+                "known": 2,
+                "total": 2,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 80297984,
+            "sampledServerPeakRssBytes": 202031104,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "mac48",
+              "runsInvolvingWorker": 2,
+              "referencePassingRunsInvolvingWorker": 2,
+              "transport": [
+                "ssh"
+              ],
+              "accounting": {
+                "attempts": 2,
+                "successful": 2,
+                "failed": 0,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 2,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 230,
+                    "known": 2,
+                    "total": 2,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 208,
+                    "known": 2,
+                    "total": 2,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 19878.505041999997,
+                    "known": 2,
+                    "total": 2,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 4,
+                "sampledServerPeakRssBytes": 184909824,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "mac48-qwen27-mlx",
+          "workflow": "case_note_normalization",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 1,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 120,
+            "successful": 120,
+            "failed": 0,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 20764,
+                "known": 120,
+                "total": 120,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 6999,
+                "known": 120,
+                "total": 120,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 726218.3811709994,
+                "known": 120,
+                "total": 120,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 108494848,
+            "sampledServerPeakRssBytes": 204832768,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "mac48",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "ssh"
+              ],
+              "accounting": {
+                "attempts": 120,
+                "successful": 120,
+                "failed": 0,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 20764,
+                    "known": 120,
+                    "total": 120,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 6999,
+                    "known": 120,
+                    "total": 120,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 726218.3811709994,
+                    "known": 120,
+                    "total": 120,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 240,
+                "sampledServerPeakRssBytes": 220938240,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "mac48-qwen27-mlx",
+          "workflow": "board_report_synthesis",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 1,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 12,
+            "successful": 12,
+            "failed": 0,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 1972,
+                "known": 12,
+                "total": 12,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 501,
+                "known": 12,
+                "total": 12,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 55471.660583000164,
+                "known": 12,
+                "total": 12,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 85803008,
+            "sampledServerPeakRssBytes": 204374016,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "mac48",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "ssh"
+              ],
+              "accounting": {
+                "attempts": 12,
+                "successful": 12,
+                "failed": 0,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 1972,
+                    "known": 12,
+                    "total": 12,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 501,
+                    "known": 12,
+                    "total": 12,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 55471.660583000164,
+                    "known": 12,
+                    "total": 12,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 24,
+                "sampledServerPeakRssBytes": 224657408,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "mac48-qwen27-mlx",
+          "workflow": "grant_cycle_package",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 1,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 9,
+            "successful": 9,
+            "failed": 0,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 1851,
+                "known": 9,
+                "total": 9,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 356,
+                "known": 9,
+                "total": 9,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 42355.06558299984,
+                "known": 9,
+                "total": 9,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 89636864,
+            "sampledServerPeakRssBytes": 204472320,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "mac48",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "ssh"
+              ],
+              "accounting": {
+                "attempts": 9,
+                "successful": 9,
+                "failed": 0,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 1851,
+                    "known": 9,
+                    "total": 9,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 356,
+                    "known": 9,
+                    "total": 9,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 42355.06558299984,
+                    "known": 9,
+                    "total": 9,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 18,
+                "sampledServerPeakRssBytes": 723484672,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        },
+        {
+          "profile": "mac48-qwen27-mlx",
+          "workflow": "stewardship_structuring",
+          "runs": 3,
+          "referencePasses": 3,
+          "completedDeliverables": 2,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 6,
+            "successful": 6,
+            "failed": 0,
+            "cancelled": 0,
+            "incomplete": 0,
+            "unknownOutcome": 0,
+            "runsWithAccounting": 3,
+            "runsMissingAccounting": 0,
+            "metrics": {
+              "inputTokens": {
+                "sum": 1274,
+                "known": 6,
+                "total": 6,
+                "coverage": 1
+              },
+              "outputTokens": {
+                "sum": 464,
+                "known": 6,
+                "total": 6,
+                "coverage": 1
+              },
+              "durationMs": {
+                "sum": 37318.71304000018,
+                "known": 6,
+                "total": 6,
+                "coverage": 1
+              }
+            }
+          },
+          "coordinatorResources": {
+            "scope": "coordinator host only",
+            "sampledPeakRssBytes": 86622208,
+            "sampledServerPeakRssBytes": 205291520,
+            "sampledPeaksAreLowerBounds": true
+          },
+          "workers": [
+            {
+              "workerId": "mac48",
+              "runsInvolvingWorker": 3,
+              "referencePassingRunsInvolvingWorker": 3,
+              "transport": [
+                "ssh"
+              ],
+              "accounting": {
+                "attempts": 6,
+                "successful": 6,
+                "failed": 0,
+                "cancelled": 0,
+                "incomplete": 0,
+                "unknownOutcome": 0,
+                "runsWithAccounting": 3,
+                "runsMissingAccounting": 0,
+                "metrics": {
+                  "inputTokens": {
+                    "sum": 1274,
+                    "known": 6,
+                    "total": 6,
+                    "coverage": 1
+                  },
+                  "outputTokens": {
+                    "sum": 464,
+                    "known": 6,
+                    "total": 6,
+                    "coverage": 1
+                  },
+                  "durationMs": {
+                    "sum": 37318.71304000018,
+                    "known": 6,
+                    "total": 6,
+                    "coverage": 1
+                  }
+                }
+              },
+              "resources": {
+                "scope": "worker before/after snapshots only",
+                "sampleCount": 12,
+                "sampledServerPeakRssBytes": 791216128,
+                "sampledPeaksAreLowerBounds": true,
+                "acceleratorAllocationMeasured": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "costs": {
+    "energy": null,
+    "electricity": null,
+    "hardware": null,
+    "labor": null,
+    "paidInferenceApi": null
+  },
+  "caveats": [
+    "Reference passes are synthetic rubric outcomes, not human reliability or expert qualification; review/abstention is reported separately from completed deliverables.",
+    "All recorded failures, repairs and incomplete attempts remain included. Unknown usage is not zero. Metric coverage applies to retained accounting; missing runs are separately counted.",
+    "Inference duration is a sum of measured attempts, not end-to-end latency, throughput or separately measured transport overhead.",
+    "A run involving multiple workers contributes to each worker involvement count; worker pass counts cannot be summed into unique successful runs or attributed causally to one worker.",
+    "Coordinator RSS never substitutes for missing worker RSS. Before/after snapshots miss interior peaks; RSS is not full model allocation, compressed memory or accelerator allocation.",
+    "No worker connectivity is tested, configuration changed, profile selected, price inferred or human time savings claimed.",
+    "Stewardship held-out fixtures duplicate development inputs; those results establish repeatability only."
+  ]
+}

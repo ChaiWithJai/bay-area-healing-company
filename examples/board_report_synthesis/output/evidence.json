@@ -1,0 +1,42 @@
+[
+  {
+    "item_id": "quarter-Q1",
+    "source_ids": [
+      "src-008b1e183a1c88f83443"
+    ],
+    "value": {
+      "quote": "Q1 served 100 participants through 20 sessions; partner referrals sustained attendance.",
+      "reason": "This is the only sentence that specifically mentions Q1 and provides details about program performance for that quarter."
+    }
+  },
+  {
+    "item_id": "quarter-Q2",
+    "source_ids": [
+      "src-008b1e183a1c88f83443"
+    ],
+    "value": {
+      "quote": "Q2 served 120 participants through 22 sessions; partner referrals sustained attendance.",
+      "reason": "This sentence directly refers to Q2 and provides the specific data on participants and sessions, meeting the requirement of selecting one complete exact sentence for Q2."
+    }
+  },
+  {
+    "item_id": "quarter-Q3",
+    "source_ids": [
+      "src-008b1e183a1c88f83443"
+    ],
+    "value": {
+      "quote": "Q3 served 140 participants through 24 sessions; partner referrals sustained attendance.",
+      "reason": "This sentence directly refers to Q3 performance data and explains the number of participants and sessions, with attendance sustained by partner referrals."
+    }
+  },
+  {
+    "item_id": "quarter-Q4",
+    "source_ids": [
+      "src-008b1e183a1c88f83443"
+    ],
+    "value": {
+      "quote": "Q4 served 160 participants through 26 sessions; partner referrals sustained attendance.",
+      "reason": "This sentence directly states the program's performance in Q4 with specific numbers and confirms sustained attendance through partner referrals."
+    }
+  }
+]

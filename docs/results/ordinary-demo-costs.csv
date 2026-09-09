@@ -1,0 +1,6 @@
+task_id,profile,run_id,reference_pass,inference_attempts,inference_ms,input_tokens,output_tokens,review_required
+volunteer_hours_reconciliation-01,bonsai8,fccfcbec-6b46-4ec2-a8d1-1b5a99b9f301,true,1,1468.186583,115,107,false
+case_note_normalization-01,bonsai8,c9ddab0c-ac70-4ecc-abf7-f5bc1a78c212,true,40,42499.916252,6880,2587,false
+board_report_synthesis-01,bonsai8,78dfdea3-ac1a-49ad-a12d-fc478fe219e2,true,4,4648.395458000043,668,225,false
+grant_cycle_package-01,bonsai8,a2354917-b105-4660-bf05-8fedb4c9dc29,true,3,3231.4819170000264,599,117,false
+stewardship_structuring-01,bonsai8,82aa6689-7e88-4d29-8aed-44877be4e908,true,2,3545.8289570000197,456,179,true

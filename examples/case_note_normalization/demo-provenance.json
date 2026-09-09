@@ -1,0 +1,15 @@
+{
+  "taskId": "case_note_normalization-01",
+  "runId": "c9ddab0c-ac70-4ecc-abf7-f5bc1a78c212",
+  "sourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+  "rubricVersion": "2.2.0",
+  "profile": "bonsai8",
+  "referencePass": true,
+  "reviewRequired": false,
+  "fixtureType": "synthetic",
+  "sourceTask": "fixtures/tasks/case_note_normalization-01/inputs",
+  "inferenceAttempts": 40,
+  "inferenceDurationMs": 42499.916252,
+  "inputTokens": 6880,
+  "outputTokens": 2587
+}

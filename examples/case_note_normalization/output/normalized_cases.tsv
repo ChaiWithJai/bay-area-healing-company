@@ -1,0 +1,69 @@
+note_id	date	service	outcome	source_id	quote
+N001	2026-06-01	housing referral	appointment scheduled	src-1fc2b0c153ebd92f0751	"Date: 2026-06-01
+Service: housing referral
+Outcome: appointment scheduled"
+N002	2026-06-02	food support	application submitted	src-af44f5ce829c4bb8b985	Encounter 2026-06-02. Service provided: food support. Outcome recorded: application submitted
+N003	2026-06-03	employment coaching	follow-up requested	src-7d28cb18a0b726a5ca1a	2026-06-03 | service = employment coaching | outcome = follow-up requested
+N004	2026-06-04	housing referral	appointment scheduled	src-ab095c32a7147717132c	"Date: 2026-06-04
+Service: housing referral
+Outcome: appointment scheduled"
+N005	2026-06-05	food support	application submitted	src-734bfa4cd835fc8ff396	Encounter 2026-06-05. Service provided: food support. Outcome recorded: application submitted
+N006	2026-06-06	employment coaching	follow-up requested	src-deaefbbc67608a4b6cc0	2026-06-06 | service = employment coaching | outcome = follow-up requested
+N007	2026-06-07	housing referral	appointment scheduled	src-b8363ef4eff6c80a9267	"Date: 2026-06-07
+Service: housing referral
+Outcome: appointment scheduled"
+N008	2026-06-08	food support	application submitted	src-ea2cc566a4ee1b44d8d7	Encounter 2026-06-08. Service provided: food support. Outcome recorded: application submitted
+N009	2026-06-09	employment coaching	follow-up requested	src-92ab35591858c188622b	2026-06-09 | service = employment coaching | outcome = follow-up requested
+N010	2026-06-10	housing referral	appointment scheduled	src-1e9283a968a66a4437d2	"Date: 2026-06-10
+Service: housing referral
+Outcome: appointment scheduled"
+N011	2026-06-11	food support	application submitted	src-8cba95a83d8c3fa90826	Encounter 2026-06-11. Service provided: food support. Outcome recorded: application submitted
+N012	2026-06-12	employment coaching	follow-up requested	src-2116c63cb1c961c85842	2026-06-12 | service = employment coaching | outcome = follow-up requested
+N013	2026-06-13	housing referral	appointment scheduled	src-d65aa01b719763358a55	"Date: 2026-06-13
+Service: housing referral
+Outcome: appointment scheduled"
+N014	2026-06-14	food support	application submitted	src-1d1285b4d82484fe2700	Encounter 2026-06-14. Service provided: food support. Outcome recorded: application submitted
+N015	2026-06-15	employment coaching	follow-up requested	src-27ca532bae0b5cc89a9a	2026-06-15 | service = employment coaching | outcome = follow-up requested
+N016	2026-06-16	housing referral	appointment scheduled	src-5a8f64b5211bb91d1041	"Date: 2026-06-16
+Service: housing referral
+Outcome: appointment scheduled"
+N017	2026-06-17	food support	application submitted	src-45d168165da65a48475e	Encounter 2026-06-17. Service provided: food support. Outcome recorded: application submitted
+N018	2026-06-18	employment coaching	follow-up requested	src-e1636bde5a095b963da8	2026-06-18 | service = employment coaching | outcome = follow-up requested
+N019	2026-06-19	housing referral	appointment scheduled	src-819833636f4170703c84	"Date: 2026-06-19
+Service: housing referral
+Outcome: appointment scheduled"
+N020	2026-06-20	food support	application submitted	src-f473e1d8ac1973da2c2b	Encounter 2026-06-20. Service provided: food support. Outcome recorded: application submitted
+N021	2026-06-21	employment coaching	follow-up requested	src-83b39464ddb8987a3062	2026-06-21 | service = employment coaching | outcome = follow-up requested
+N022	2026-06-22	housing referral	appointment scheduled	src-6f05daeb11398946c10e	"Date: 2026-06-22
+Service: housing referral
+Outcome: appointment scheduled"
+N023	2026-06-23	food support	application submitted	src-f1164d608934ab28db97	Encounter 2026-06-23. Service provided: food support. Outcome recorded: application submitted
+N024	2026-06-24	employment coaching	follow-up requested	src-f1b4c8d5f103de78593d	2026-06-24 | service = employment coaching | outcome = follow-up requested
+N025	2026-06-25	housing referral	appointment scheduled	src-feedfcb23416d0fae669	"Date: 2026-06-25
+Service: housing referral
+Outcome: appointment scheduled"
+N026	2026-06-26	food support	application submitted	src-5500d183e07558dc38a8	Encounter 2026-06-26. Service provided: food support. Outcome recorded: application submitted
+N027	2026-06-27	employment coaching	follow-up requested	src-3c825debf447cd1bf7fb	2026-06-27 | service = employment coaching | outcome = follow-up requested
+N028	2026-06-28	housing referral	appointment scheduled	src-55a0481fe119d107e0b5	"Date: 2026-06-28
+Service: housing referral
+Outcome: appointment scheduled"
+N029	2026-06-01	food support	application submitted	src-354c354a76e870e8ad56	Encounter 2026-06-01. Service provided: food support. Outcome recorded: application submitted
+N030	2026-06-02	employment coaching	follow-up requested	src-2cfdbede538103e0fa2b	2026-06-02 | service = employment coaching | outcome = follow-up requested
+N031	2026-06-03	housing referral	appointment scheduled	src-0056a5ba01612ce432d2	"Date: 2026-06-03
+Service: housing referral
+Outcome: appointment scheduled"
+N032	2026-06-04	food support	application submitted	src-8a6cb8c8a14ddd4a8212	Encounter 2026-06-04. Service provided: food support. Outcome recorded: application submitted
+N033	2026-06-05	employment coaching	follow-up requested	src-3ce2a6f0e05a473a9fc0	2026-06-05 | service = employment coaching | outcome = follow-up requested
+N034	2026-06-06	housing referral	appointment scheduled	src-41aa464d40818ec96275	"Date: 2026-06-06
+Service: housing referral
+Outcome: appointment scheduled"
+N035	2026-06-07	food support	application submitted	src-fc7fceb5549b016ece63	Encounter 2026-06-07. Service provided: food support. Outcome recorded: application submitted
+N036	2026-06-08	employment coaching	follow-up requested	src-6f0148123ea418366469	2026-06-08 | service = employment coaching | outcome = follow-up requested
+N037	2026-06-09	housing referral	appointment scheduled	src-c235df159c8cd89c0ac8	"Date: 2026-06-09
+Service: housing referral
+Outcome: appointment scheduled"
+N038	2026-06-10	food support	application submitted	src-16d14771346e7faa4639	Encounter 2026-06-10. Service provided: food support. Outcome recorded: application submitted
+N039	2026-06-11	employment coaching	follow-up requested	src-ef33cf7d3465f52812a5	2026-06-11 | service = employment coaching | outcome = follow-up requested
+N040	2026-06-12	housing referral	appointment scheduled	src-fab66dd2abb140811079	"Date: 2026-06-12
+Service: housing referral
+Outcome: appointment scheduled"

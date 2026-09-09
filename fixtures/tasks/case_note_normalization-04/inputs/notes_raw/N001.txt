@@ -1,0 +1,5 @@
+Date: 2026-07-01
+Service: housing referral
+Outcome: appointment scheduled
+Name: Synthetic Person 1
+Email: person1@example.invalid

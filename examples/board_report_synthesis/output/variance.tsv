@@ -1,0 +1,13 @@
+quarter	category	budget	actual	variance	record_type	source_id
+Q1	Program	10000	9800	-200	financial	src-206345133bd8ce246bfb
+Q2	Program	11000	10900	-100	financial	src-206345133bd8ce246bfb
+Q3	Program	12000	12000	0	financial	src-206345133bd8ce246bfb
+Q4	Program	13000	13100	100	financial	src-206345133bd8ce246bfb
+Q1	participants		100		metric	src-bc4313a358b6eb44eb33
+Q1	sessions		20		metric	src-bc4313a358b6eb44eb33
+Q2	participants		120		metric	src-bc4313a358b6eb44eb33
+Q2	sessions		22		metric	src-bc4313a358b6eb44eb33
+Q3	participants		140		metric	src-bc4313a358b6eb44eb33
+Q3	sessions		24		metric	src-bc4313a358b6eb44eb33
+Q4	participants		160		metric	src-bc4313a358b6eb44eb33
+Q4	sessions		26		metric	src-bc4313a358b6eb44eb33

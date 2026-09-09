@@ -1,0 +1,3 @@
+2026-07-09 | service = employment coaching | outcome = follow-up requested
+Name: Synthetic Person 9
+Email: person9@example.invalid

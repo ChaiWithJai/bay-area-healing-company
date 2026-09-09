@@ -1,0 +1,9 @@
+{
+  "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+  "variant": "ordinary",
+  "review_status": "generated_unreviewed",
+  "synthetic": true,
+  "accepted_hours": 9,
+  "conflict_count": 0,
+  "ordinary_shift_count": 3
+}

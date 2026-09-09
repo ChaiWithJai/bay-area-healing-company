@@ -1,0 +1,15 @@
+{
+  "taskId": "grant_cycle_package-01",
+  "runId": "a2354917-b105-4660-bf05-8fedb4c9dc29",
+  "sourceCodeDigest": "4a17a32de5be628aed1418c4525a3c59267ab4dbacffab8aac5a20877ed01018",
+  "rubricVersion": "2.2.0",
+  "profile": "bonsai8",
+  "referencePass": true,
+  "reviewRequired": false,
+  "fixtureType": "synthetic",
+  "sourceTask": "fixtures/tasks/grant_cycle_package-01/inputs",
+  "inferenceAttempts": 3,
+  "inferenceDurationMs": 3231.4819170000264,
+  "inputTokens": 599,
+  "outputTokens": 117
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "item_id": "option-0",
+    "source_ids": [
+      "src-09a19dd09c44605f6e3e"
+    ],
+    "value": {
+      "quote": "Fiscal sponsorship: The candidate host quotes a 7 percent administration fee. Timing to first tax-deductible funds is 30 days after host acceptance and a signed agreement. Reversibility requires consent and a documented asset exit. Succession rests with the independent host board.",
+      "reason": "The paragraph beginning with 'Fiscal sponsorship:' is directly extracted from the provided source text and matches the required schema."
+    }
+  },
+  {
+    "item_id": "option-1",
+    "source_ids": [
+      "src-09a19dd09c44605f6e3e"
+    ],
+    "value": {
+      "quote": "Standalone nonprofit: The scenario assumes setup costs of 2500 dollars. Timing to first tax-deductible funds is uncertain pending recognition; allow several months for planning. Reversibility requires board-approved dissolution or transfer. Succession rests with the elected independent board.",
+      "reason": "The paragraph beginning with 'Standalone nonprofit:' is directly extracted from the provided source text."
+    }
+  }
+]

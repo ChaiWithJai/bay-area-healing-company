@@ -1,0 +1,5 @@
+{
+  "accepted_hours": "Sum only uncontested hours with at least two source types",
+  "conflict_policy": "Exclude conflicting pairs pending coordinator review",
+  "unit": "hours"
+}

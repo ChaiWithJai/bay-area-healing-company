@@ -1,0 +1,482 @@
+[
+  {
+    "item_id": "case-0",
+    "source_ids": [
+      "src-1fc2b0c153ebd92f0751"
+    ],
+    "value": {
+      "date": "2026-06-01",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-01\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-1",
+    "source_ids": [
+      "src-af44f5ce829c4bb8b985"
+    ],
+    "value": {
+      "date": "2026-06-02",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-02. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-2",
+    "source_ids": [
+      "src-7d28cb18a0b726a5ca1a"
+    ],
+    "value": {
+      "date": "2026-06-03",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-03 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-3",
+    "source_ids": [
+      "src-ab095c32a7147717132c"
+    ],
+    "value": {
+      "date": "2026-06-04",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-04\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-4",
+    "source_ids": [
+      "src-734bfa4cd835fc8ff396"
+    ],
+    "value": {
+      "date": "2026-06-05",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-05. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-5",
+    "source_ids": [
+      "src-deaefbbc67608a4b6cc0"
+    ],
+    "value": {
+      "date": "2026-06-06",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-06 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-6",
+    "source_ids": [
+      "src-b8363ef4eff6c80a9267"
+    ],
+    "value": {
+      "date": "2026-06-07",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-07\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-7",
+    "source_ids": [
+      "src-ea2cc566a4ee1b44d8d7"
+    ],
+    "value": {
+      "date": "2026-06-08",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-08. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-8",
+    "source_ids": [
+      "src-92ab35591858c188622b"
+    ],
+    "value": {
+      "date": "2026-06-09",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-09 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-9",
+    "source_ids": [
+      "src-1e9283a968a66a4437d2"
+    ],
+    "value": {
+      "date": "2026-06-10",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-10\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-10",
+    "source_ids": [
+      "src-8cba95a83d8c3fa90826"
+    ],
+    "value": {
+      "date": "2026-06-11",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-11. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-11",
+    "source_ids": [
+      "src-2116c63cb1c961c85842"
+    ],
+    "value": {
+      "date": "2026-06-12",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-12 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-12",
+    "source_ids": [
+      "src-d65aa01b719763358a55"
+    ],
+    "value": {
+      "date": "2026-06-13",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-13\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-13",
+    "source_ids": [
+      "src-1d1285b4d82484fe2700"
+    ],
+    "value": {
+      "date": "2026-06-14",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-14. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-14",
+    "source_ids": [
+      "src-27ca532bae0b5cc89a9a"
+    ],
+    "value": {
+      "date": "2026-06-15",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-15 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-15",
+    "source_ids": [
+      "src-5a8f64b5211bb91d1041"
+    ],
+    "value": {
+      "date": "2026-06-16",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-16\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-16",
+    "source_ids": [
+      "src-45d168165da65a48475e"
+    ],
+    "value": {
+      "date": "2026-06-17",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-17. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-17",
+    "source_ids": [
+      "src-e1636bde5a095b963da8"
+    ],
+    "value": {
+      "date": "2026-06-18",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-18 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-18",
+    "source_ids": [
+      "src-819833636f4170703c84"
+    ],
+    "value": {
+      "date": "2026-06-19",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-19\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-19",
+    "source_ids": [
+      "src-f473e1d8ac1973da2c2b"
+    ],
+    "value": {
+      "date": "2026-06-20",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-20. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-20",
+    "source_ids": [
+      "src-83b39464ddb8987a3062"
+    ],
+    "value": {
+      "date": "2026-06-21",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-21 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-21",
+    "source_ids": [
+      "src-6f05daeb11398946c10e"
+    ],
+    "value": {
+      "date": "2026-06-22",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-22\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-22",
+    "source_ids": [
+      "src-f1164d608934ab28db97"
+    ],
+    "value": {
+      "date": "2026-06-23",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-23. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-23",
+    "source_ids": [
+      "src-f1b4c8d5f103de78593d"
+    ],
+    "value": {
+      "date": "2026-06-24",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-24 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-24",
+    "source_ids": [
+      "src-feedfcb23416d0fae669"
+    ],
+    "value": {
+      "date": "2026-06-25",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-25\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-25",
+    "source_ids": [
+      "src-5500d183e07558dc38a8"
+    ],
+    "value": {
+      "date": "2026-06-26",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-26. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-26",
+    "source_ids": [
+      "src-3c825debf447cd1bf7fb"
+    ],
+    "value": {
+      "date": "2026-06-27",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-27 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-27",
+    "source_ids": [
+      "src-55a0481fe119d107e0b5"
+    ],
+    "value": {
+      "date": "2026-06-28",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-28\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-28",
+    "source_ids": [
+      "src-354c354a76e870e8ad56"
+    ],
+    "value": {
+      "date": "2026-06-01",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-01. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-29",
+    "source_ids": [
+      "src-2cfdbede538103e0fa2b"
+    ],
+    "value": {
+      "date": "2026-06-02",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-02 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-30",
+    "source_ids": [
+      "src-0056a5ba01612ce432d2"
+    ],
+    "value": {
+      "date": "2026-06-03",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-03\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-31",
+    "source_ids": [
+      "src-8a6cb8c8a14ddd4a8212"
+    ],
+    "value": {
+      "date": "2026-06-04",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-04. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-32",
+    "source_ids": [
+      "src-3ce2a6f0e05a473a9fc0"
+    ],
+    "value": {
+      "date": "2026-06-05",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-05 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-33",
+    "source_ids": [
+      "src-41aa464d40818ec96275"
+    ],
+    "value": {
+      "date": "2026-06-06",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-06\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-34",
+    "source_ids": [
+      "src-fc7fceb5549b016ece63"
+    ],
+    "value": {
+      "date": "2026-06-07",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-07. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-35",
+    "source_ids": [
+      "src-6f0148123ea418366469"
+    ],
+    "value": {
+      "date": "2026-06-08",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-08 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-36",
+    "source_ids": [
+      "src-c235df159c8cd89c0ac8"
+    ],
+    "value": {
+      "date": "2026-06-09",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-09\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  },
+  {
+    "item_id": "case-37",
+    "source_ids": [
+      "src-16d14771346e7faa4639"
+    ],
+    "value": {
+      "date": "2026-06-10",
+      "outcome": "application submitted",
+      "quote": "Encounter 2026-06-10. Service provided: food support. Outcome recorded: application submitted",
+      "service": "food support"
+    }
+  },
+  {
+    "item_id": "case-38",
+    "source_ids": [
+      "src-ef33cf7d3465f52812a5"
+    ],
+    "value": {
+      "date": "2026-06-11",
+      "outcome": "follow-up requested",
+      "quote": "2026-06-11 | service = employment coaching | outcome = follow-up requested",
+      "service": "employment coaching"
+    }
+  },
+  {
+    "item_id": "case-39",
+    "source_ids": [
+      "src-fab66dd2abb140811079"
+    ],
+    "value": {
+      "date": "2026-06-12",
+      "outcome": "appointment scheduled",
+      "quote": "Date: 2026-06-12\nService: housing referral\nOutcome: appointment scheduled",
+      "service": "housing referral"
+    }
+  }
+]

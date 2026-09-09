@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ASSET-1",
+    "description": "Program source code",
+    "current_owner": "Project contributors",
+    "proposed_owner": "Community Stewardship Host",
+    "consent_status": "documented"
+  },
+  {
+    "id": "ASSET-2",
+    "description": "Project domain",
+    "current_owner": "Founder",
+    "proposed_owner": "",
+    "consent_status": "documented"
+  }
+]

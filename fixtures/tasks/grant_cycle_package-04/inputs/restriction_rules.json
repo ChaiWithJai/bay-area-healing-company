@@ -1,0 +1,7 @@
+{
+  "expected_total": 21000,
+  "unrestricted_only": [
+    "administration"
+  ],
+  "currency": "USD"
+}

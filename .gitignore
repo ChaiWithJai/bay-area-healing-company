@@ -1,0 +1,12 @@
+node_modules/
+/output/
+/inputs/
+wm.config.json
+.env
+*.log
+
+.wm/
+reports/
+.venv/
+__pycache__/
+*.pyc

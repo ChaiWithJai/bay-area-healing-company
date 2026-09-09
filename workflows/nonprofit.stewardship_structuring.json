@@ -1,0 +1,19 @@
+{
+  "id": "nonprofit/stewardship_structuring",
+  "name": "Stewardship structuring (Hashimoto pattern)",
+  "ale_nearest": ["business/compliance_regulatory", "legal/doctrinal_legal_research (4 instances)"],
+  "task": "Given a project's assets, contributor set, funding intent, and jurisdiction, produce a structuring decision memo comparing fiscal sponsorship vs standalone 501(c)(3), an IP transfer inventory, a fund-use policy, and a governance contract naming who decides what.",
+  "inputs": ["asset_inventory.json", "contributor_roster.csv", "funding_intent.md", "candidate_hosts.json"],
+  "deliverable": ["output/structuring_memo.md", "output/ip_transfer_inventory.tsv", "output/fund_use_policy.md", "output/governance_matrix.tsv"],
+  "eval_mode": "structured_tabular gate + free_text_rubric",
+  "gates": [
+    "every asset in inventory has a named post-transfer owner",
+    "fund_use_policy contains an explicit founder-benefit exclusion",
+    "governance_matrix names a party independent of the founder with oversight authority",
+    "time-to-first-tax-deductible-dollar stated for each option"
+  ],
+  "score": "0.5 * inventory completeness + 0.5 * rubric probes on memo (option tradeoffs, reversibility analysis, succession)",
+  "why_agents_fail_today": "Legal is the thinnest domain in ALE (15 instances total). Jurisdiction-specific and consequence-heavy.",
+  "economic_value": "Unlocks the other four. Converts a project from unfundable to able to receive restricted and tax-deductible money. Ghostty's benchmark: 7% admin fee vs months-to-years of IRS wait.",
+  "note": "This is stewardship structuring, the fifth workflow above the four operating workflows: converting a project into an accountable entity that can receive restricted money (the Hashimoto/Ghostty fiscal-sponsorship pattern). It gates the other four — a project that can't receive restricted funds can't run a grant cycle."
+}

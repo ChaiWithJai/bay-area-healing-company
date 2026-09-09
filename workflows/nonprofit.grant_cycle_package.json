@@ -1,0 +1,17 @@
+{
+  "id": "nonprofit/grant_cycle_package",
+  "name": "Grant cycle management",
+  "ale_nearest": ["business/compliance_regulatory (5 instances)", "business/accounting_finance (115 instances)"],
+  "task": "Given a funder RFP, prior-year 990, program budget, and last cycle's reporting template, produce a complete application package plus a compliance crosswalk mapping every funder requirement to an evidence location.",
+  "inputs": ["rfp.pdf", "form_990.pdf", "program_budget.xlsx", "prior_report_template.docx", "restriction_rules.json"],
+  "deliverable": ["application/narrative.docx", "application/budget.xlsx", "output/compliance_crosswalk.tsv"],
+  "eval_mode": "structured_tabular + free_text_rubric",
+  "gates": [
+    "every RFP requirement id appears exactly once in crosswalk",
+    "budget totals reconcile to restriction_rules.json within 0.5%",
+    "no unrestricted-fund line charged to a restricted category"
+  ],
+  "score": "0.6 * field-level budget accuracy vs reference + 0.4 * narrative rubric (evidence-anchored yes/no probes)",
+  "why_agents_fail_today": "ALE failure taxonomy: 75% of failures are Understanding/Approach, not execution. Funder-specific conventions are the domain knowledge agents lack.",
+  "economic_value": "Grant writer + compliance officer hours per cycle; clawback risk reduction. Market anchor: grant management software ~$1.9-2.3B global, ~10% CAGR, government is largest end-user segment."
+}

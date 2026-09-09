@@ -1,0 +1,1161 @@
+{
+  "schemaVersion": 1,
+  "mode": "heldout-synthetic-repeatability",
+  "provenance": {
+    "sourceCodeDigest": "a6ac1ab666907cc507801bf5ecfd3bb5669ceb61439b1af873dee1e0e61a985e",
+    "configDigest": "0900cf0ec9188e97ad6ec6ac3f4bf4eab975f6afe18d2a2ca2cb9dc902d5d560",
+    "catalogDigest": "c8e3acbfb52be421b8ca04e87d575117b4432f8c9ab5c1a43525c44a51794c77",
+    "rubricVersion": "2.2.0",
+    "split": "heldout"
+  },
+  "campaignIds": [
+    "heldout-two-mac-routed-3rep-v3",
+    "heldout-mac48-qwen27-v2",
+    "heldout-mac48-qwen27-extra2-v2"
+  ],
+  "expectedTaskCount": 15,
+  "requiredRunsPerTask": 3,
+  "profiles": [
+    {
+      "profile": "routed",
+      "runs": 45,
+      "referencePasses": 45,
+      "referenceFailures": 0,
+      "unknownReferenceOutcomes": 0,
+      "completedDeliverables": 21,
+      "correctReviewOrAbstention": 33,
+      "accounting": {
+        "attempts": 474,
+        "runsWithAttemptAccounting": 45,
+        "runsMissingAttemptAccounting": 0,
+        "inputTokens": {
+          "sum": 82728,
+          "known": 474,
+          "total": 474,
+          "coverage": 1,
+          "runsMissingMetricAccounting": 0
+        },
+        "outputTokens": {
+          "sum": 29985,
+          "known": 474,
+          "total": 474,
+          "coverage": 1,
+          "runsMissingMetricAccounting": 0
+        },
+        "durationMs": {
+          "sum": 506504.4207120001,
+          "known": 474,
+          "total": 474,
+          "coverage": 1,
+          "runsMissingMetricAccounting": 0
+        }
+      },
+      "tasks": [
+        {
+          "taskId": "volunteer_hours_reconciliation-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 3,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 345,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 321,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 5234.327416000001,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "volunteer_hours_reconciliation-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 3,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 345,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 321,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 4027.907249000001,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "volunteer_hours_reconciliation-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 0,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "case_note_normalization-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 120,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 20640,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 7761,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 121746.71471599997,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "case_note_normalization-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 123,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 21267,
+              "known": 123,
+              "total": 123,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 7977,
+              "known": 123,
+              "total": 123,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 125924.9183750003,
+              "known": 123,
+              "total": 123,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "case_note_normalization-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 120,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 20631,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 7743,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 113485.71766599984,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "board_report_synthesis-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 12,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 2004,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 675,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 10105.611335000023,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "board_report_synthesis-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 18,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 3147,
+              "known": 18,
+              "total": 18,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 906,
+              "known": 18,
+              "total": 18,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 26647.75896000024,
+              "known": 18,
+              "total": 18,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "board_report_synthesis-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 18,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 2802,
+              "known": 18,
+              "total": 18,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 888,
+              "known": 18,
+              "total": 18,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 25124.781290000188,
+              "known": 18,
+              "total": 18,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "grant_cycle_package-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 9,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1797,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 351,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 6222.362043000525,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "grant_cycle_package-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 9,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1797,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 351,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 4776.902539999923,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "grant_cycle_package-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 15,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 3000,
+              "known": 15,
+              "total": 15,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 630,
+              "known": 15,
+              "total": 15,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 22341.658788999775,
+              "known": 15,
+              "total": 15,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "stewardship_structuring-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 6,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1368,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 537,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 9112.27391699981,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "stewardship_structuring-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 6,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1368,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 537,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 6956.226332999533,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "stewardship_structuring-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 12,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 2217,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 987,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 24797.260082999943,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        }
+      ],
+      "minimumThreeRunsPerTask": true,
+      "syntheticRepeatabilityQualified": true,
+      "reasons": []
+    },
+    {
+      "profile": "mac48-qwen27-mlx",
+      "runs": 45,
+      "referencePasses": 43,
+      "referenceFailures": 2,
+      "unknownReferenceOutcomes": 0,
+      "completedDeliverables": 20,
+      "correctReviewOrAbstention": 32,
+      "accounting": {
+        "attempts": 445,
+        "runsWithAttemptAccounting": 45,
+        "runsMissingAttemptAccounting": 0,
+        "inputTokens": {
+          "sum": 77925,
+          "known": 445,
+          "total": 445,
+          "coverage": 1,
+          "runsMissingMetricAccounting": 0
+        },
+        "outputTokens": {
+          "sum": 25451,
+          "known": 445,
+          "total": 445,
+          "coverage": 1,
+          "runsMissingMetricAccounting": 0
+        },
+        "durationMs": {
+          "sum": 2126466.954774997,
+          "known": 445,
+          "total": 445,
+          "coverage": 1,
+          "runsMissingMetricAccounting": 0
+        }
+      },
+      "tasks": [
+        {
+          "taskId": "volunteer_hours_reconciliation-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 3,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 345,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 312,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 24661.70791500001,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "volunteer_hours_reconciliation-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 3,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 345,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 312,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 25425.502000999943,
+              "known": 3,
+              "total": 3,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "volunteer_hours_reconciliation-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 0,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": null,
+              "known": 0,
+              "total": 0,
+              "coverage": null,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "case_note_normalization-04",
+          "runs": 3,
+          "referencePasses": 2,
+          "referenceFailures": 1,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 2,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 119,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 20587,
+              "known": 119,
+              "total": 119,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 6941,
+              "known": 119,
+              "total": 119,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 573622.8325079996,
+              "known": 119,
+              "total": 119,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "case_note_normalization-05",
+          "runs": 3,
+          "referencePasses": 2,
+          "referenceFailures": 1,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 2,
+          "accounting": {
+            "attempts": 119,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 20603,
+              "known": 119,
+              "total": 119,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 6951,
+              "known": 119,
+              "total": 119,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 583108.2458879985,
+              "known": 119,
+              "total": 119,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "case_note_normalization-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 120,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 20754,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 6987,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 583102.5369189996,
+              "known": 120,
+              "total": 120,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "board_report_synthesis-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 12,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 2052,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 516,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 48542.960875000805,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "board_report_synthesis-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 12,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 2052,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 516,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 44091.63808400021,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "board_report_synthesis-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 12,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1812,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 462,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 39789.25908299885,
+              "known": 12,
+              "total": 12,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "grant_cycle_package-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 0,
+          "accounting": {
+            "attempts": 9,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1887,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 366,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 32556.15095799882,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "grant_cycle_package-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 9,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1887,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 366,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 31667.065248999512,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "grant_cycle_package-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 9,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1779,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 330,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 31230.773003000766,
+              "known": 9,
+              "total": 9,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "stewardship_structuring-04",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 6,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1386,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 489,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 36819.88762500021,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "stewardship_structuring-05",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 3,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 6,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1386,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 489,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 40026.7234150006,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        },
+        {
+          "taskId": "stewardship_structuring-06",
+          "runs": 3,
+          "referencePasses": 3,
+          "referenceFailures": 0,
+          "unknownReferenceOutcomes": 0,
+          "completedDeliverables": 0,
+          "correctReviewOrAbstention": 3,
+          "accounting": {
+            "attempts": 6,
+            "runsWithAttemptAccounting": 3,
+            "runsMissingAttemptAccounting": 0,
+            "inputTokens": {
+              "sum": 1050,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "outputTokens": {
+              "sum": 414,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            },
+            "durationMs": {
+              "sum": 31821.67125199968,
+              "known": 6,
+              "total": 6,
+              "coverage": 1,
+              "runsMissingMetricAccounting": 0
+            }
+          }
+        }
+      ],
+      "minimumThreeRunsPerTask": true,
+      "syntheticRepeatabilityQualified": false,
+      "reasons": [
+        "One or more reference outcomes failed or remain unknown"
+      ]
+    }
+  ],
+  "claim": "Repeated synthetic reference agreement only, not human/expert qualification or production reliability.",
+  "caveats": [
+    "Distinct run IDs establish separately recorded runs, not statistical independence. Repetition numbers may restart across campaigns.",
+    "Completed deliverable and correct review/abstention counts may overlap; do not add them together.",
+    "Known token and timing sums include only retained measurements. Coverage excludes missing run accounting, which is separately counted; unknown is not zero.",
+    "Three repeats per task are a bounded repeatability check, not a reliability confidence bound. All failures remain visible.",
+    "Stewardship held-out inputs duplicate development inputs, so these tasks establish repeatability rather than unseen-input generalization.",
+    "No hidden references are loaded; retained digest metadata is checked only. No runtime or routing configuration is changed."
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "RISK-A",
+    "description": "Volunteer recruitment is below plan",
+    "status": "open"
+  },
+  {
+    "id": "RISK-B",
+    "description": "Grant renewal remains uncertain",
+    "status": "open"
+  }
+]

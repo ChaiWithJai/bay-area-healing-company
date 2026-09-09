@@ -1,0 +1,452 @@
+[
+  {
+    "id": "volunteer_hours_reconciliation-01",
+    "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+    "split": "development",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "volunteer_hours_reconciliation-02",
+    "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+    "split": "development",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "volunteer_hours_reconciliation-03",
+    "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+    "split": "development",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "volunteer_hours_reconciliation-04",
+    "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+    "split": "heldout",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "volunteer_hours_reconciliation-05",
+    "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+    "split": "heldout",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "volunteer_hours_reconciliation-06",
+    "workflow_id": "nonprofit/volunteer_hours_reconciliation",
+    "split": "heldout",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "case_note_normalization-01",
+    "workflow_id": "nonprofit/case_note_normalization",
+    "split": "development",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "case_note_normalization-02",
+    "workflow_id": "nonprofit/case_note_normalization",
+    "split": "development",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "case_note_normalization-03",
+    "workflow_id": "nonprofit/case_note_normalization",
+    "split": "development",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "case_note_normalization-04",
+    "workflow_id": "nonprofit/case_note_normalization",
+    "split": "heldout",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "case_note_normalization-05",
+    "workflow_id": "nonprofit/case_note_normalization",
+    "split": "heldout",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "case_note_normalization-06",
+    "workflow_id": "nonprofit/case_note_normalization",
+    "split": "heldout",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "board_report_synthesis-01",
+    "workflow_id": "nonprofit/board_report_synthesis",
+    "split": "development",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "board_report_synthesis-02",
+    "workflow_id": "nonprofit/board_report_synthesis",
+    "split": "development",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "board_report_synthesis-03",
+    "workflow_id": "nonprofit/board_report_synthesis",
+    "split": "development",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "board_report_synthesis-04",
+    "workflow_id": "nonprofit/board_report_synthesis",
+    "split": "heldout",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "board_report_synthesis-05",
+    "workflow_id": "nonprofit/board_report_synthesis",
+    "split": "heldout",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "board_report_synthesis-06",
+    "workflow_id": "nonprofit/board_report_synthesis",
+    "split": "heldout",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "grant_cycle_package-01",
+    "workflow_id": "nonprofit/grant_cycle_package",
+    "split": "development",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "grant_cycle_package-02",
+    "workflow_id": "nonprofit/grant_cycle_package",
+    "split": "development",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "grant_cycle_package-03",
+    "workflow_id": "nonprofit/grant_cycle_package",
+    "split": "development",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "grant_cycle_package-04",
+    "workflow_id": "nonprofit/grant_cycle_package",
+    "split": "heldout",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "grant_cycle_package-05",
+    "workflow_id": "nonprofit/grant_cycle_package",
+    "split": "heldout",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "grant_cycle_package-06",
+    "workflow_id": "nonprofit/grant_cycle_package",
+    "split": "heldout",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "stewardship_structuring-01",
+    "workflow_id": "nonprofit/stewardship_structuring",
+    "split": "development",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "stewardship_structuring-02",
+    "workflow_id": "nonprofit/stewardship_structuring",
+    "split": "development",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "stewardship_structuring-03",
+    "workflow_id": "nonprofit/stewardship_structuring",
+    "split": "development",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "stewardship_structuring-04",
+    "workflow_id": "nonprofit/stewardship_structuring",
+    "split": "heldout",
+    "variant": "ordinary",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "complete"
+  },
+  {
+    "id": "stewardship_structuring-05",
+    "workflow_id": "nonprofit/stewardship_structuring",
+    "split": "heldout",
+    "variant": "conflict",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  },
+  {
+    "id": "stewardship_structuring-06",
+    "workflow_id": "nonprofit/stewardship_structuring",
+    "split": "heldout",
+    "variant": "missing",
+    "inputs": "inputs",
+    "reference": "reference.json",
+    "provenance": {
+      "type": "synthetic",
+      "generated_by": "fixtures/generate.py",
+      "review_status": "generated_unreviewed",
+      "contains_real_personal_data": false
+    },
+    "expected_result": "review_or_blocked"
+  }
+]

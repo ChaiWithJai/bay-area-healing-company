@@ -1,0 +1,30 @@
+[
+  {
+    "item_id": "scan-0",
+    "source_ids": [
+      "src-5af0f53285bf0b531f21"
+    ],
+    "value": {
+      "records": [
+        {
+          "hours": 2,
+          "person_id": "PERSON-A",
+          "quote": "PERSON-A SHIFT-A 2",
+          "shift_id": "SHIFT-A"
+        },
+        {
+          "hours": 3,
+          "person_id": "PERSON-B",
+          "quote": "PERSON-B SHIFT-B 3",
+          "shift_id": "SHIFT-B"
+        },
+        {
+          "hours": 4,
+          "person_id": "PERSON-C",
+          "quote": "PERSON-C SHIFT-C 4",
+          "shift_id": "SHIFT-C"
+        }
+      ]
+    }
+  }
+]

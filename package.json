@@ -1,0 +1,33 @@
+{
+  "name": "workflow-manager",
+  "version": "0.2.0",
+  "description": "Local-only accountability workflows with verifiable artifacts, small-model routing, and resource accounting",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "wm": "./bin/wm.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "demo": "node bin/wm.js task run volunteer_hours_reconciliation-01"
+  },
+  "files": [
+    "bin",
+    "src",
+    "tools",
+    "workflows",
+    "fixtures",
+    "docs",
+    "requirements.txt",
+    "README.md",
+    "LICENSE",
+    "scripts",
+    "npm-shrinkwrap.json"
+  ],
+  "dependencies": {
+    "ajv": "8.18.0"
+  }
+}
